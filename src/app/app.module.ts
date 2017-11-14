@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {TopMenuComponent} from './top-menu/top-menu.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
@@ -17,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
         BrowserModule,
         BrowserAnimationsModule,
         MatMenuModule,
+        MatButtonModule,
         MatIconModule,
         AppRoutingModule
     ],
