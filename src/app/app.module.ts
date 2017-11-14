@@ -8,15 +8,16 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
-import { SettingsComponent } from './settings/settings.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         TopMenuComponent,
         HomeComponent,
-        SettingsComponent
+        AboutComponent
     ],
     imports: [
         BrowserModule,
@@ -24,6 +25,7 @@ import { SettingsComponent } from './settings/settings.component';
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
+        MatCardModule,
         AppRoutingModule
     ],
     providers: [],
