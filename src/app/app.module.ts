@@ -7,15 +7,19 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon'
 
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TopMenuComponent
+        TopMenuComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        RouterModule.forRoot(),
         MatMenuModule,
         MatIconModule
     ],
