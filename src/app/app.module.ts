@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {TopMenuComponent} from './top-menu/top-menu.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button'
@@ -14,15 +13,12 @@ import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CoursesResolver} from "./services/courses.resolver";
 import {MatTabsModule} from '@angular/material/tabs';
-import { CourseCardListComponent } from './course-card-list/course-card-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TopMenuComponent,
         HomeComponent,
-        AboutComponent,
-        CourseCardListComponent
+        AboutComponent
     ],
     imports: [
         BrowserModule,
