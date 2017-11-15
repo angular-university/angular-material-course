@@ -13,7 +13,7 @@ such as for example [nave](https://github.com/isaacs/nave) or [nvm-windows](http
 
 With a CLI version 1.5 or above, let's scaffold a new project with routing:
 
-    ng new angular-material-course --routing
+    ng new angular-material-hello --routing
 
 # Step 2 - Installing Angular Material dependencies
 
