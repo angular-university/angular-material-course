@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
+import {CoursesResolver} from "./services/courses.resolver";
 
 @NgModule({
     declarations: [
@@ -30,7 +31,9 @@ import {HttpClientModule} from "@angular/common/http";
         MatCardModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        CoursesResolver
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

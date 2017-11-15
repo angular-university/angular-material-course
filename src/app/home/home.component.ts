@@ -1,4 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Course} from "../model/course";
+import {Observable} from "rxjs/Observable";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'home',
@@ -8,9 +12,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  courses$: Observable<Course[]>;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+      this.route.data.pipe(map(data => data['courses']));
   }
 
 }

@@ -1,4 +1,11 @@
 export const COURSES = {
+
+    0: {
+        id:0,
+        description: "Angular Material Course",
+        iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
+        longDescription: "Build Applications with the official Angular Widget Library"
+    },
     1: {
         id: 1,
         description: "Angular for Beginners",

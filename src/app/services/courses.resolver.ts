@@ -17,7 +17,7 @@ export class CoursesResolver implements Resolve<Course[]> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):  Observable<Course[]> {
         return this.http.get("/api/courses")
-            .pipe(map(res => res['courses']));
+            .pipe(map(res => res['payload']));
     }
 
 }
