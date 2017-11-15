@@ -7,10 +7,7 @@ import {CoursesResolver} from "./services/courses.resolver";
 const routes: Routes = [
     {
         path: "",
-        component: HomeComponent,
-        resolve: {
-            courses: CoursesResolver
-        }
+        component: HomeComponent
 
     },
     {

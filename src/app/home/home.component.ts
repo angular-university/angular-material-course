@@ -3,6 +3,8 @@ import {ActivatedRoute} from "@angular/router";
 import {Course} from "../model/course";
 import {Observable} from "rxjs/Observable";
 import {map, filter} from "rxjs/operators";
+import {COURSES} from "../model/db-data";
+import {of} from "rxjs/observable/of";
 
 @Component({
     selector: 'home',
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
 
-        const courses$ = this.route.data.pipe(map( data => data['courses']));
+        const courses$ = of(Object.values(COURSES));
 
         this.beginnerCourses$ = courses$.pipe(
             map( courses => courses.filter(course => course.category === 'BEGINNER'))

@@ -10,8 +10,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import {HttpClientModule} from "@angular/common/http";
-import {CoursesResolver} from "./services/courses.resolver";
 import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
@@ -23,7 +21,6 @@ import {MatTabsModule} from '@angular/material/tabs';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpClientModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
@@ -31,9 +28,7 @@ import {MatTabsModule} from '@angular/material/tabs';
         MatTabsModule,
         AppRoutingModule
     ],
-    providers: [
-        CoursesResolver
-    ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
