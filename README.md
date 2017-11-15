@@ -1,5 +1,5 @@
 
-## Angular PWA Course - Build the future of the Web Today
+## Angular Material Course
 
 This repository contains the code of the [Angular Material Course](https://angular-university.io/course/angular-material-course).
 
@@ -32,11 +32,11 @@ With the following command the angular-cli will be installed globally in your ma
 
 We can install the master branch using the following commands:
 
-    git clone https://github.com/angular-university/angular-pwa-course.git
+    git clone https://github.com/angular-university/angular-material-course.git
     
 This repository is made of several separate npm modules, that are installable separately. For example, to run the au-input module, we can do the following:
     
-    cd angular-pwa-course
+    cd angular-material-course
     npm install
 
 Its also possible to install the modules as usual using npm:
