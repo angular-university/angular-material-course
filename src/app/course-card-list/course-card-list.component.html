@@ -1,0 +1,14 @@
+<mat-card *ngFor="let course of courses">
+    <mat-card-header>
+        <mat-card-title>{{course.description}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="course.iconUrl">
+    <mat-card-content>
+        <p>
+            {{course.longDescription}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>VIEW COURSE</button>
+    </mat-card-actions>
+</mat-card>

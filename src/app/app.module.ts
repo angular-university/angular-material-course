@@ -13,13 +13,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CoursesResolver} from "./services/courses.resolver";
+import {MatTabsModule} from '@angular/material/tabs';
+import { CourseCardListComponent } from './course-card-list/course-card-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         TopMenuComponent,
         HomeComponent,
-        AboutComponent
+        AboutComponent,
+        CourseCardListComponent
     ],
     imports: [
         BrowserModule,
@@ -29,6 +32,7 @@ import {CoursesResolver} from "./services/courses.resolver";
         MatButtonModule,
         MatIconModule,
         MatCardModule,
+        MatTabsModule,
         AppRoutingModule
     ],
     providers: [
