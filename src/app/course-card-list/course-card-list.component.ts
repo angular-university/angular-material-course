@@ -4,8 +4,7 @@ import {Course} from "../model/course";
 @Component({
     selector: 'course-card-list',
     templateUrl: './course-card-list.component.html',
-    styleUrls: ['./course-card-list.component.css'],
-    encapsulation: ViewEncapsulation.None
+    styleUrls: ['./course-card-list.component.css']
 })
 export class CourseCardListComponent implements OnInit {
 
