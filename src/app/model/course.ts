@@ -6,4 +6,5 @@ export interface Course {
     iconUrl: string;
     courseListIcon: string;
     longDescription: string;
+    category:string;
 }

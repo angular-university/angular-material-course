@@ -1,4 +1,6 @@
-export const COURSES = {
+import {Course} from "./course";
+
+export const COURSES: any = {
 
     0: {
         id:0,
