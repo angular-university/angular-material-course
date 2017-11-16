@@ -1,0 +1,31 @@
+
+
+
+<button mat-icon-button [matMenuTriggerFor]="menu">
+
+    <mat-icon>menu</mat-icon>
+
+</button>
+
+<mat-menu #menu>
+
+    <button mat-menu-item routerLink="/">
+        <mat-icon>library_books</mat-icon>
+        <span>Courses</span>
+    </button>
+
+    <button mat-menu-item routerLink="about">
+        <mat-icon>question_answer</mat-icon>
+        <span>About</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Register</span>
+    </button>
+
+    <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>Login</span>
+    </button>
+
+</mat-menu>

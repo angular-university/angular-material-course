@@ -11,12 +11,14 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent
+        AboutComponent,
+        TopMenuComponent
     ],
     imports: [
         BrowserModule,
