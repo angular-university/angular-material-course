@@ -1,10 +1,8 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
 import {Course} from "../model/course";
 import {Observable} from "rxjs/Observable";
 import {map, filter} from "rxjs/operators";
 import {COURSES} from "../model/db-data";
-import {of} from "rxjs/observable/of";
 
 @Component({
     selector: 'home',
@@ -13,25 +11,21 @@ import {of} from "rxjs/observable/of";
 })
 export class HomeComponent implements OnInit {
 
-    beginnerCourses$: Observable<Course[]>;
+    beginnerCourses: Course[];
 
-    advancedCourses$: Observable<Course[]>;
+    advancedCourses: Course[];
 
-    constructor(private route: ActivatedRoute) {
+    constructor() {
 
     }
 
     ngOnInit() {
 
-        const courses$ = of<Course[]>(Object.values(COURSES));
+        const courses = Object.values(COURSES);
 
-        this.beginnerCourses$ = courses$.pipe(
-            map( courses => courses.filter(course => course.category === 'BEGINNER'))
-        );
+        this.beginnerCourses = courses.filter(course => course.category === 'BEGINNER');
 
-        this.advancedCourses$ = courses$.pipe(
-            map( courses => courses.filter(course => course.category === 'ADVANCED'))
-        );
+        this.advancedCourses = courses.filter(course => course.category === 'ADVANCED');
     }
 
 }
