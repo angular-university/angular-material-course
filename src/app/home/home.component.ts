@@ -1,7 +1,5 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Course} from "../model/course";
-import {Observable} from "rxjs/Observable";
-import {map, filter} from "rxjs/operators";
 import {COURSES} from "../model/db-data";
 
 @Component({
