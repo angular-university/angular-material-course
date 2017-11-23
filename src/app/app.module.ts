@@ -15,6 +15,7 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { CourseComponent } from './course/course.component';
 
 
 
@@ -23,7 +24,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
         AppComponent,
         HomeComponent,
         AboutComponent,
-        CoursesCardListComponent
+        CoursesCardListComponent,
+        CourseComponent
     ],
     imports: [
         BrowserModule,
