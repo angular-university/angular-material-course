@@ -13,6 +13,11 @@ import { AboutComponent } from './about/about.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
 
 @NgModule({
     declarations: [
@@ -30,7 +35,10 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
         MatIconModule,
         MatCardModule,
         MatTabsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        MatSidenavModule,
+        MatListModule,
+        MatToolbarModule
     ],
     providers: [],
     bootstrap: [AppComponent]
