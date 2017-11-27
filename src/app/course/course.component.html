@@ -11,16 +11,28 @@
 
     </mat-input-container>
 
-    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="seqNo">
+
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                #
+            </mat-header-cell>
+
+            <mat-cell *matCellDef="let lesson" class="description-cell">
+                {{lesson.seqNo}}
+            </mat-cell>
+
+        </ng-container>
 
         <ng-container matColumnDef="description">
 
-            <mat-header-cell *matHeaderCellDef>
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
                 Description
             </mat-header-cell>
 
-            <mat-cell *matCellDef="let course" class="description-cell">
-                {{course.description}}
+            <mat-cell *matCellDef="let lesson" class="description-cell">
+                {{lesson.description}}
             </mat-cell>
 
         </ng-container>
@@ -31,8 +43,8 @@
                 Duration
             </mat-header-cell>
 
-            <mat-cell *matCellDef="let course" class="duration-cell">
-                {{course.duration}}
+            <mat-cell *matCellDef="let lesson" class="duration-cell">
+                {{lesson.duration}}
                 <mat-icon>access_time</mat-icon>
             </mat-cell>
 

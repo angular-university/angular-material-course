@@ -17,7 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CourseComponent } from './course/course.component';
 import {MatTableModule} from '@angular/material/table';
-import {MatInputModule} from "@angular/material";
+import {MatInputModule, MatSortModule} from "@angular/material";
 import {MatPaginatorModule} from '@angular/material/paginator';
 
 
@@ -43,7 +43,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
         MatToolbarModule,
         MatTableModule,
         MatInputModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatSortModule
     ],
     providers: [],
     bootstrap: [AppComponent]
