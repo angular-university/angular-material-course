@@ -1,21 +1,46 @@
+<div class="course">
 
+    <h2>{{course?.description}}</h2>
 
-<mat-table class="lessons-table mat-elevation-z8" #table [dataSource]="dataSource">
+    <img class="course-thumbnail" [src]="course?.iconUrl">
 
-    <ng-container matColumnDef="description">
-        <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
-        <mat-cell *matCellDef="let course"> {{course.description}} </mat-cell>
-    </ng-container>
+    <mat-table class="lessons-table mat-elevation-z8" #table [dataSource]="dataSource">
 
-    <ng-container matColumnDef="duration">
-        <mat-header-cell *matHeaderCellDef> Duration </mat-header-cell>
-        <mat-cell *matCellDef="let course"> {{course.duration}} </mat-cell>
-    </ng-container>
+        <ng-container matColumnDef="description">
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-header-cell *matHeaderCellDef>
+                Description
+            </mat-header-cell>
 
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            <mat-cell *matCellDef="let course">
+                {{course.description}}
+            </mat-cell>
 
-</mat-table>
+        </ng-container>
+
+        <ng-container matColumnDef="duration">
+
+            <mat-header-cell *matHeaderCellDef>
+                Duration
+            </mat-header-cell>
+
+            <mat-cell *matCellDef="let course" class="duration-cell">
+                {{course.duration}}
+                <mat-icon>access_time</mat-icon>
+            </mat-cell>
+
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns">
+
+        </mat-header-row>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+
+        </mat-row>
+
+    </mat-table>
+
+</div>
 
 

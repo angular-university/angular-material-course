@@ -2,16 +2,18 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {MatTableDataSource} from "@angular/material";
 import {Lesson} from "../model/lesson";
-import {findLessonsForCourse} from "../model/db-data";
+import {findCourseById, findLessonsForCourse} from "../model/db-data";
+import {Course} from "../model/course";
 
 
 @Component({
     selector: 'course',
     templateUrl: './course.component.html',
-    styleUrls: ['./course.component.css'],
-    encapsulation: ViewEncapsulation.None
+    styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
+
+    course:Course;
 
     displayedColumns = ["description", "duration"];
 
@@ -25,13 +27,11 @@ export class CourseComponent implements OnInit {
 
         this.route.params.subscribe(params => {
 
-            console.log("Course", params['id']);
+            const courseId = params['id'];
 
-            const courseLessons = findLessonsForCourse(params['id']);
+            this.course = findCourseById(courseId);
 
-            console.log('lessons:', courseLessons);
-
-            this.dataSource.data = courseLessons;
+            this.dataSource.data = findLessonsForCourse(courseId);
 
         });
 

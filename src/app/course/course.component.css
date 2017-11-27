@@ -1,6 +1,21 @@
 
-
-.lessons-table {
+.course {
+    text-align: center;
     max-width: 300px;
-    margin: 100px auto;
+    margin: 0 auto;
+}
+
+.course-thumbnail {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.duration-cell {
+    text-align: center;
+}
+
+.duration-cell mat-icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
 }
