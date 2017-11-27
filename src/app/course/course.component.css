@@ -10,6 +10,11 @@
     margin-bottom: 20px;
 }
 
+.description-cell {
+    text-align: left;
+    margin: 10px auto;
+}
+
 .duration-cell {
     text-align: center;
 }
