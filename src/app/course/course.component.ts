@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {MatTableDataSource} from "@angular/material";
+import {MatPaginator, MatTableDataSource} from "@angular/material";
 import {Lesson} from "../model/lesson";
 import {findCourseById, findLessonsForCourse} from "../model/db-data";
 import {Course} from "../model/course";
@@ -11,13 +11,15 @@ import {Course} from "../model/course";
     templateUrl: './course.component.html',
     styleUrls: ['./course.component.css']
 })
-export class CourseComponent implements OnInit {
+export class CourseComponent implements OnInit, AfterViewInit {
 
     course:Course;
 
     displayedColumns = ["description", "duration"];
 
     dataSource = new MatTableDataSource<Lesson>();
+
+    @ViewChild(MatPaginator) paginator: MatPaginator;
 
     constructor(private route: ActivatedRoute) {
 
@@ -35,6 +37,10 @@ export class CourseComponent implements OnInit {
 
         });
 
+    }
+
+    ngAfterViewInit() {
+        this.dataSource.paginator = this.paginator;
     }
 
     searchLesson(search:string) {

@@ -11,7 +11,7 @@
 
     </mat-input-container>
 
-    <mat-table class="lessons-table mat-elevation-z8" #table [dataSource]="dataSource">
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
 
         <ng-container matColumnDef="description">
 
@@ -47,6 +47,10 @@
         </mat-row>
 
     </mat-table>
+
+    <mat-paginator [pageSize]="3"
+                   [pageSizeOptions]="[3, 5, 10]">
+    </mat-paginator>
 
 </div>
 
