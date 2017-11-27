@@ -16,7 +16,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CourseComponent } from './course/course.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -38,7 +38,8 @@ import { CourseComponent } from './course/course.component';
         AppRoutingModule,
         MatSidenavModule,
         MatListModule,
-        MatToolbarModule
+        MatToolbarModule,
+        MatTableModule
     ],
     providers: [],
     bootstrap: [AppComponent]

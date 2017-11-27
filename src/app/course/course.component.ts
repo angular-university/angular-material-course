@@ -1,27 +1,40 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {switchMap} from "rxjs/operators";
+import {MatTableDataSource} from "@angular/material";
+import {Lesson} from "../model/lesson";
+import {findLessonsForCourse} from "../model/db-data";
+
 
 @Component({
-  selector: 'course',
-  templateUrl: './course.component.html',
-  styleUrls: ['./course.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'course',
+    templateUrl: './course.component.html',
+    styleUrls: ['./course.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class CourseComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute ) {
+    displayedColumns = ["description", "duration"];
 
-      route.params.subscribe(params => {
+    dataSource = new MatTableDataSource<Lesson>();
 
-          console.log("Course", params['id']);
+    constructor(private route: ActivatedRoute) {
 
-      });
+    }
 
-  }
+    ngOnInit() {
 
-  ngOnInit() {
+        this.route.params.subscribe(params => {
 
-  }
+            console.log("Course", params['id']);
+
+            const courseLessons = findLessonsForCourse(params['id']);
+
+            console.log('lessons:', courseLessons);
+
+            this.dataSource.data = courseLessons;
+
+        });
+
+    }
 
 }
