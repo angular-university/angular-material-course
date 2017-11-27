@@ -17,6 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CourseComponent } from './course/course.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from "@angular/material";
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {MatTableModule} from '@angular/material/table';
         MatSidenavModule,
         MatListModule,
         MatToolbarModule,
-        MatTableModule
+        MatTableModule,
+        MatInputModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -4,6 +4,13 @@
 
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
+    <mat-input-container>
+
+        <input matInput (keyup)="searchLesson($event.target.value)"
+               placeholder="Search Lessons">
+
+    </mat-input-container>
+
     <mat-table class="lessons-table mat-elevation-z8" #table [dataSource]="dataSource">
 
         <ng-container matColumnDef="description">
