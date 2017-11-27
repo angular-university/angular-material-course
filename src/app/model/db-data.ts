@@ -1,14 +1,7 @@
 
 
- const COURSES: any = {
+export const COURSES: any = {
 
-    0: {
-        id:0,
-        description: "Angular Material Course",
-        iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
-        longDescription: "Build Applications with the official Angular Widget Library",
-        category: 'BEGINNER'
-    },
     1: {
         id: 1,
         description: "Angular for Beginners",
@@ -19,7 +12,7 @@
     },
     2: {
         id: 2,
-        description: 'Angular Security MasterClass - Web Security Fundamentals',
+        description: 'Angular Security Course - Web Security Fundamentals',
         longDescription: "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
         courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/lock-v2.png',
@@ -27,8 +20,8 @@
     },
     3: {
         id: 3,
-        description: 'Angular PWA - Progressive Web Apps MasterClass',
-        longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.</p>",
+        description: 'Angular PWA - Progressive Web Apps Course',
+        longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
         courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/alien.png',
         category: 'ADVANCED'
@@ -52,7 +45,7 @@
     6: {
         id: 6,
         description: 'The Complete Typescript Course',
-        longDescription: "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.</p>",
+        longDescription: "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
         courseListIcon: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-lesson.png',
         category: 'BEGINNER'
@@ -64,7 +57,14 @@
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png',
         courseListIcon: 'https://angular-academy.s3.amazonaws.com/course-logos/observables_rxjs.png',
         category: 'BEGINNER'
-    }
+    },
+    8: {
+        id:8,
+        description: "Angular Material Course",
+        iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
+        longDescription: "Build Applications with the official Angular Widget Library",
+        category: 'ADVANCED'
+    },
 };
 
 
