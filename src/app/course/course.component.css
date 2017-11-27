@@ -1,13 +1,14 @@
 
 .course {
     text-align: center;
-    max-width: 300px;
+    max-width: 370px;
     margin: 0 auto;
 }
 
 .course-thumbnail {
-    width: 200px;
-    margin-bottom: 20px;
+    width: 150px;
+    margin: 20px auto 0 auto;
+    display: block;
 }
 
 .description-cell {
