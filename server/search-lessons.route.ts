@@ -10,12 +10,13 @@ export function searchLessons(req: Request, res: Response) {
 
     const queryParams = req.query;
 
-    const filter = queryParams.filter,
+    const courseId = queryParams.courseId,
+          filter = queryParams.filter,
           sortOrder = queryParams.order,
           pageNumber = parseInt(queryParams.pageNumber),
           pageSize = parseInt(queryParams.pageSize);
 
-    let lessons = Object.values(LESSONS).sort((l1, l2) => l1.id - l2.id);
+    let lessons = Object.values(LESSONS).filter(lesson => lesson.courseId == courseId).sort((l1, l2) => l1.id - l2.id);
 
     if (filter) {
        lessons = lessons.filter(lesson => lesson.description.toLowerCase().search(filter) >= 0);

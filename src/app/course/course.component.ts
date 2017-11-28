@@ -32,7 +32,9 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         this.course = this.route.snapshot.data["course"];
 
-        // TODO this.dataSource.data = findLessonsForCourse(courseId);
+        this.coursesService.findLessons(this.course.id)
+            .subscribe(lessons => this.dataSource.data = lessons);
+
 
     }
 
@@ -41,7 +43,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
         this.dataSource.sort = this.sort;
     }
 
-    searchLesson(search:string) {
+    searchLesson(search = '') {
 
         search = search.trim();
         search = search.toLowerCase();
