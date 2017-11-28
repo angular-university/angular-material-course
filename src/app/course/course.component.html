@@ -6,7 +6,7 @@
 
     <mat-input-container>
 
-        <input matInput (keyup)="searchLesson($event.target.value)"
+        <input matInput [ngModel]="filter"
                placeholder="Search Lessons">
 
     </mat-input-container>

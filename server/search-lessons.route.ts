@@ -19,14 +19,14 @@ export function searchLessons(req: Request, res: Response) {
     let lessons = Object.values(LESSONS).filter(lesson => lesson.courseId == courseId).sort((l1, l2) => l1.id - l2.id);
 
     if (filter) {
-       lessons = lessons.filter(lesson => lesson.description.toLowerCase().search(filter) >= 0);
+       lessons = lessons.filter(lesson => lesson.description.trim().toLowerCase().search(filter) >= 0);
     }
 
-    if (sortOrder === "desc") {
+    if (sortOrder == "desc") {
         lessons = lessons.reverse();
     }
 
-    const initialPos = (pageNumber - 1) * pageSize;
+    const initialPos = pageNumber * pageSize;
 
     const lessonsPage = lessons.slice(initialPos, initialPos + pageSize);
 

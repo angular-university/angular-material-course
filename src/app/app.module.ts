@@ -22,6 +22,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {CourseResolver} from "./services/course.resolver";
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        FormsModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
