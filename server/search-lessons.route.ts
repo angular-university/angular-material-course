@@ -12,7 +12,7 @@ export function searchLessons(req: Request, res: Response) {
 
     const courseId = queryParams.courseId,
           filter = queryParams.filter,
-          sortOrder = queryParams.order,
+          sortOrder = queryParams.sortOrder,
           pageNumber = parseInt(queryParams.pageNumber),
           pageSize = parseInt(queryParams.pageSize);
 
@@ -29,7 +29,6 @@ export function searchLessons(req: Request, res: Response) {
     const initialPos = pageNumber * pageSize;
 
     const lessonsPage = lessons.slice(initialPos, initialPos + pageSize);
-
 
     res.status(200).json({payload: lessonsPage});
 }

@@ -5,64 +5,41 @@
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
     <mat-input-container>
-
         <input matInput [ngModel]="filter"
                placeholder="Search Lessons">
-
     </mat-input-container>
 
     <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="seqNo">
-
-            <mat-header-cell *matHeaderCellDef mat-sort-header>
-                #
-            </mat-header-cell>
-
+            <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
             <mat-cell *matCellDef="let lesson" class="description-cell">
                 {{lesson.seqNo}}
             </mat-cell>
-
         </ng-container>
 
         <ng-container matColumnDef="description">
-
-            <mat-header-cell *matHeaderCellDef mat-sort-header>
-                Description
-            </mat-header-cell>
-
+            <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
             <mat-cell *matCellDef="let lesson" class="description-cell">
                 {{lesson.description}}
             </mat-cell>
-
         </ng-container>
 
         <ng-container matColumnDef="duration">
-
-            <mat-header-cell *matHeaderCellDef>
-                Duration
-            </mat-header-cell>
-
+            <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
             <mat-cell *matCellDef="let lesson" class="duration-cell">
                 {{lesson.duration}}
                 <mat-icon>access_time</mat-icon>
             </mat-cell>
-
         </ng-container>
 
-        <mat-header-row *matHeaderRowDef="displayedColumns">
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
-        </mat-header-row>
-
-        <mat-row *matRowDef="let row; columns: displayedColumns;">
-
-        </mat-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
     </mat-table>
 
-    <mat-paginator [pageSize]="3"
-                   [pageSizeOptions]="[3, 5, 10]">
-    </mat-paginator>
+    <mat-paginator [pageSize]="3" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
 
 </div>
 

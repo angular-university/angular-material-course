@@ -147,7 +147,7 @@ export const LESSONS = {
         id: 11,
         "description": "Course Helicopter View",
         "duration": "08:19",
-        "seqNo": 0,
+        "seqNo": 1,
         courseId: 2
     },
 
@@ -155,7 +155,7 @@ export const LESSONS = {
         id: 12,
         "description": "Installing Git, Node, NPM and Choosing an IDE",
         "duration": "04:17",
-        "seqNo": 20,
+        "seqNo": 2,
         courseId: 2
     },
 
@@ -163,7 +163,7 @@ export const LESSONS = {
         id: 13,
         "description": "Installing The Lessons Code - Learn Why Its Essential To Use NPM 5",
         "duration": "06:05",
-        "seqNo": 30,
+        "seqNo": 3,
         courseId: 2
     },
 
@@ -171,7 +171,7 @@ export const LESSONS = {
         id: 14,
         "description": "How To Run Node In TypeScript With Hot Reloading",
         "duration": "03:57",
-        "seqNo": 40,
+        "seqNo": 4,
         courseId: 2
     },
 
@@ -179,49 +179,49 @@ export const LESSONS = {
         id: 15,
         "description": "Guided Tour Of The Sample Application",
         "duration": "06:00",
-        "seqNo": 50,
+        "seqNo": 5,
         courseId: 2
     },
     16: {
         id: 16,
         "description": "Client Side Authentication Service - API Design",
         "duration": "04:53",
-        "seqNo": 60,
+        "seqNo": 6,
         courseId: 2
     },
     17: {
         id: 17,
         "description": "Client Authentication Service - Design and Implementation",
         "duration": "09:14",
-        "seqNo": 70,
+        "seqNo": 7,
         courseId: 2
     },
     18: {
         id: 18,
         "description": "The New Angular HTTP Client - Doing a POST Call To The Server",
         "duration": "06:08",
-        "seqNo": 80,
+        "seqNo": 8,
         courseId: 2
     },
     19: {
         id: 19,
         "description": "User Sign Up Server-Side Implementation in Express",
         "duration": "08:50",
-        "seqNo": 90,
+        "seqNo": 9,
         courseId: 2
     },
     20: {
         id: 20,
         "description": "Introduction To Cryptographic Hashes - A Running Demo",
         "duration": "05:46",
-        "seqNo": 100,
+        "seqNo": 10,
         courseId: 2
     },
     21: {
         id: 21,
         "description": "Some Interesting Properties Of Hashing Functions - Validating Passwords",
         "duration": "06:31",
-        "seqNo": 110,
+        "seqNo": 11,
         courseId: 2
     },
 
@@ -232,28 +232,28 @@ export const LESSONS = {
         id: 22,
         "description": "Course Kick-Off - Install Node, NPM, IDE And Service Workers Section Code",
         "duration": "07:19",
-        "seqNo": 0,
+        "seqNo": 1,
         courseId: 3
     },
     23: {
         id: 23,
         "description": "Service Workers In a Nutshell - Service Worker Registration",
         "duration": "6:59",
-        "seqNo": 10,
+        "seqNo": 2,
         courseId: 3
     },
     24: {
         id: 24,
         "description": "Service Workers Hello World - Lifecycle Part 1 and PWA Chrome Dev Tools",
         "duration": "7:28",
-        "seqNo": 20,
+        "seqNo": 3,
         courseId: 3
     },
     25: {
         id: 25,
         "description": "Service Workers and Application Versioning - Install & Activate Lifecycle Phases",
         "duration": "10:17",
-        "seqNo": 30,
+        "seqNo": 4,
         courseId: 3
     },
 
@@ -261,28 +261,28 @@ export const LESSONS = {
         id: 26,
         "description": "Downloading The Offline Page - The Service Worker Installation Phase",
         "duration": "09:50",
-        "seqNo": 40,
+        "seqNo": 5,
         courseId: 3
     },
     27: {
         id: 27,
         "description": "Introduction to the Cache Storage PWA API",
         "duration": "04:44",
-        "seqNo": 50,
+        "seqNo": 6,
         courseId: 3
     },
     28: {
         id: 28,
         "description": "View Service Workers HTTP Interception Features In Action",
         "duration": "06:07",
-        "seqNo": 60,
+        "seqNo": 7,
         courseId: 3
     },
     29: {
         id: 29,
         "description": "Service Workers Error Handling - Serving The Offline Page",
         "duration": "5:38",
-        "seqNo": 70,
+        "seqNo": 8,
         courseId: 3
     }
 
