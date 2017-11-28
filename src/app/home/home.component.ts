@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Course} from "../model/course";
-import {COURSES} from "../model/db-data";
+import {Observable} from "rxjs/Observable";
+import {CoursesService} from "../services/courses.service";
+import {map} from "rxjs/operators";
 
 @Component({
     selector: 'home',
@@ -9,21 +11,26 @@ import {COURSES} from "../model/db-data";
 })
 export class HomeComponent implements OnInit {
 
-    beginnerCourses: Course[];
+    beginnerCourses$: Observable<Course[]>;
 
-    advancedCourses: Course[];
+    advancedCourses$: Observable<Course[]>;
 
-    constructor() {
+    constructor(private coursesService: CoursesService) {
 
     }
 
     ngOnInit() {
 
-        const courses = Object.values(COURSES);
+        const courses$ = this.coursesService.findAllCourses();
 
-        this.beginnerCourses = courses.filter(course => course.category === 'BEGINNER');
+        this.beginnerCourses$ = courses$.pipe(
+          map(courses => courses.filter(course => course.category === 'BEGINNER') )
+        );
 
-        this.advancedCourses = courses.filter(course => course.category === 'ADVANCED');
+        this.advancedCourses$ = courses$.pipe(
+            map(courses => courses.filter(course => course.category === 'ADVANCED') )
+        );
+
     }
 
 }

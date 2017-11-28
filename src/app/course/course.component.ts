@@ -2,8 +2,9 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
 import {Lesson} from "../model/lesson";
-import {findCourseById, findLessonsForCourse} from "../model/db-data";
 import {Course} from "../model/course";
+import {CoursesService} from "../services/courses.service";
+
 
 
 @Component({
@@ -23,21 +24,15 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor(private route: ActivatedRoute) {
+    constructor(private route: ActivatedRoute, private coursesService: CoursesService) {
 
     }
 
     ngOnInit() {
 
-        this.route.params.subscribe(params => {
+        this.course = this.route.snapshot.data["course"];
 
-            const courseId = params['id'];
-
-            this.course = findCourseById(courseId);
-
-            this.dataSource.data = findLessonsForCourse(courseId);
-
-        });
+        // TODO this.dataSource.data = findLessonsForCourse(courseId);
 
     }
 

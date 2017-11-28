@@ -19,6 +19,9 @@ import { CourseComponent } from './course/course.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule, MatSortModule} from "@angular/material";
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {CoursesService} from "./services/courses.service";
+import {HttpClientModule} from "@angular/common/http";
+import {CourseResolver} from "./services/course.resolver";
 
 
 @NgModule({
@@ -32,6 +35,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
@@ -46,7 +50,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
         MatPaginatorModule,
         MatSortModule
     ],
-    providers: [],
+    providers: [
+        CoursesService,
+        CourseResolver
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
