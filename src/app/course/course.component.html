@@ -5,7 +5,7 @@
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
     <mat-input-container>
-        <input matInput [ngModel]="filter" (keyup)="searchLessons()"
+        <input matInput [ngModel]="filter" (keyup)="loadLessons()"
                placeholder="Search Lessons">
     </mat-input-container>
 
@@ -40,9 +40,7 @@
 
     </mat-table>
 
-    <mat-paginator [length]="resultsLength" [pageSize]="3"  [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
-
-    {{paginator?.length}}
+    <mat-paginator [length]="course?.lessonsCount" [pageSize]="3"  [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
 
 </div>
 

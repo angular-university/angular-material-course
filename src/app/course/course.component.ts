@@ -4,8 +4,9 @@ import {MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
 import {Lesson} from "../model/lesson";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
-import {startWith,switchMap} from 'rxjs/operators';
+import {startWith,tap} from 'rxjs/operators';
 import {merge} from "rxjs/observable/merge";
+import {LessonsDataSource} from "./lessons.datasource";
 
 @Component({
     selector: 'course',
@@ -18,11 +19,9 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     displayedColumns = ["seqNo", "description", "duration"];
 
-    dataSource = new MatTableDataSource<Lesson>();
+    dataSource: LessonsDataSource;
 
     filter = '';
-
-    resultsLength = 0;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -34,34 +33,19 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.course = this.route.snapshot.data["course"];
+        this.dataSource = new LessonsDataSource(this.coursesService);
     }
 
     ngAfterViewInit() {
 
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-
         this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-        merge(this.sort.sortChange, this.paginator.page)
+        merge( this.sort.sortChange, this.paginator.page )
             .pipe(
                 startWith(null),
-                switchMap(() => this.coursesService.findLessons(
-                    this.course.id,
-                    this.filter,
-                    this.sort.direction,
-                    this.paginator.pageIndex,
-                    this.paginator.pageSize)
-                )
+                tap(() => this.dataSource.loadLessons(this.course.id, this.filter, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize))
             )
-            .subscribe(lessons => {
-                this.resultsLength = this.course.lessonsCount;
-                this.dataSource.data = lessons;
-            });
+            .subscribe();
     }
-
-
-
-
 
 }
