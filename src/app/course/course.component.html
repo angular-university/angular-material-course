@@ -5,11 +5,12 @@
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
     <mat-input-container>
-        <input matInput [ngModel]="filter"
+        <input matInput [ngModel]="filter" (keyup)="searchLessons()"
                placeholder="Search Lessons">
     </mat-input-container>
 
-    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort>
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort
+               matSortActive="seqNo" matSortDisableClear matSortDirection="asc">
 
         <ng-container matColumnDef="seqNo">
             <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
@@ -26,7 +27,7 @@
         </ng-container>
 
         <ng-container matColumnDef="duration">
-            <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef disableClear>Duration</mat-header-cell>
             <mat-cell *matCellDef="let lesson" class="duration-cell">
                 {{lesson.duration}}
                 <mat-icon>access_time</mat-icon>
@@ -39,7 +40,9 @@
 
     </mat-table>
 
-    <mat-paginator [pageSize]="3" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+    <mat-paginator [length]="resultsLength" [pageSize]="3"  [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+
+    {{paginator?.length}}
 
 </div>
 

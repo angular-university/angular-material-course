@@ -22,6 +22,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     filter = '';
 
+    resultsLength = 0;
+
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
     @ViewChild(MatSort) sort: MatSort;
@@ -30,18 +32,16 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     }
 
-
     ngOnInit() {
-
         this.course = this.route.snapshot.data["course"];
-
     }
-
 
     ngAfterViewInit() {
 
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
         merge(this.sort.sortChange, this.paginator.page)
             .pipe(
@@ -54,17 +54,14 @@ export class CourseComponent implements OnInit, AfterViewInit {
                     this.paginator.pageSize)
                 )
             )
-            .subscribe(lessons => this.dataSource.data = lessons);
-
+            .subscribe(lessons => {
+                this.resultsLength = this.course.lessonsCount;
+                this.dataSource.data = lessons;
+            });
     }
 
 
-    searchLesson(search = '') {
 
-        search = search.trim();
-        search = search.toLowerCase();
 
-        this.dataSource.filter = search;
-    }
 
 }

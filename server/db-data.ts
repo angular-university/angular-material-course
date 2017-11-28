@@ -8,7 +8,8 @@ export const COURSES: any = {
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
         courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
         longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
-        category: 'BEGINNER'
+        category: 'BEGINNER',
+        lessonsCount: 10
     },
     2: {
         id: 2,
@@ -16,7 +17,8 @@ export const COURSES: any = {
         longDescription: "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
         courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/lock-v2.png',
-        category: 'ADVANCED'
+        category: 'ADVANCED',
+        lessonsCount: 11
     },
     3: {
         id: 3,
@@ -24,7 +26,8 @@ export const COURSES: any = {
         longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
         courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/alien.png',
-        category: 'ADVANCED'
+        category: 'ADVANCED',
+        lessonsCount: 8
     },
     4: {
         id: 4,
