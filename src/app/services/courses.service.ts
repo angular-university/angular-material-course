@@ -26,6 +26,17 @@ export class CoursesService {
             );
     }
 
+    findAllCourseLessons(courseId:number): Observable<Lesson[]> {
+        return this.http.get('/api/lessons', {
+            params: new HttpParams()
+                .set('courseId', courseId.toString())
+                .set('pageNumber', "0")
+                .set('pageSize', "1000")
+        }).pipe(
+            map(res =>  res["payload"])
+        );
+    }
+
     findLessons(
         courseId:number, filter = '', sortOrder = 'asc', pageNumber = 0, pageSize = 3):  Observable<Lesson[]> {
 
