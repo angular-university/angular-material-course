@@ -5,7 +5,7 @@
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
     <mat-input-container>
-        <input matInput [ngModel]="filter" (keyup)="loadLessons()"
+        <input matInput (keyup)="loadLessons()" #searchInput
                placeholder="Search Lessons">
     </mat-input-container>
 

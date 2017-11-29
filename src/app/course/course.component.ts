@@ -21,11 +21,11 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     dataSource: LessonsDataSource;
 
-    filter = '';
-
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
     @ViewChild(MatSort) sort: MatSort;
+
+    @ViewChild('searchInput') searchInput: HTMLInputElement;
 
     constructor(private route: ActivatedRoute, private coursesService: CoursesService) {
 
@@ -43,7 +43,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
         merge( this.sort.sortChange, this.paginator.page )
             .pipe(
                 startWith(null),
-                tap(() => this.dataSource.loadLessons(this.course.id, this.filter, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize))
+                tap(() => this.dataSource.loadLessons(this.course.id, this.searchInput.value, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize))
             )
             .subscribe();
     }
