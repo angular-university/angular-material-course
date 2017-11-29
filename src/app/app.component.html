@@ -1,7 +1,6 @@
 <mat-sidenav-container fullscreen>
 
     <mat-sidenav #start>
-
         <mat-nav-list>
 
             <a mat-list-item routerLink="/">
@@ -23,13 +22,12 @@
                 <span>Login</span>
             </a>
 
-
         </mat-nav-list>
 
     </mat-sidenav>
 
     <mat-toolbar color="primary">
-        <button mat-icon-button (click)="start.open()">
+        <button mat-icon-button (click)="start.open('mouse')">
             <mat-icon>menu</mat-icon>
         </button>
     </mat-toolbar>
