@@ -60,8 +60,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
                 })
             )
             .subscribe();
-
-
     }
 
 
