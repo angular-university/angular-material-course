@@ -3,6 +3,7 @@
 
 import {Request, Response} from 'express';
 import {LESSONS} from "./db-data";
+import {setTimeout} from "timers";
 
 
 
@@ -30,5 +31,9 @@ export function searchLessons(req: Request, res: Response) {
 
     const lessonsPage = lessons.slice(initialPos, initialPos + pageSize);
 
-    res.status(200).json({payload: lessonsPage});
+    setTimeout(() => {
+        res.status(200).json({payload: lessonsPage});
+    },1000);
+
+
 }

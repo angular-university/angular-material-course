@@ -17,7 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CourseComponent } from './course/course.component';
 import {MatTableModule} from '@angular/material/table';
-import {MatInputModule, MatSortModule} from "@angular/material";
+import {MatInputModule, MatProgressSpinnerModule, MatSortModule} from "@angular/material";
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
@@ -51,7 +51,8 @@ import 'rxjs/add/observable/fromEvent';
         MatTableModule,
         MatInputModule,
         MatPaginatorModule,
-        MatSortModule
+        MatSortModule,
+        MatProgressSpinnerModule
     ],
     providers: [
         CoursesService,

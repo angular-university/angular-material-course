@@ -8,6 +8,8 @@
         <input matInput  #searchInput placeholder="Search Lessons">
     </mat-input-container>
 
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+
     <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort
                matSortActive="seqNo" matSortDisableClear matSortDirection="asc">
 
