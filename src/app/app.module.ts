@@ -11,28 +11,39 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import {CourseComponent} from "./course/course.component";
+import {MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
+import {CoursesService} from "./services/courses.service";
+import {HttpClientModule} from "@angular/common/http";
+import {CourseResolver} from "./services/course.resolver";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         AboutComponent,
-        TopMenuComponent,
+        CourseComponent,
         CoursesCardListComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
         MatCardModule,
         MatTabsModule,
+        MatSidenavModule,
+        MatListModule,
+        MatToolbarModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        CoursesService,
+        CourseResolver
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
