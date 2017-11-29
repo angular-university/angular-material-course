@@ -5,8 +5,7 @@
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
     <mat-input-container>
-        <input matInput (keyup)="loadLessons()" #searchInput
-               placeholder="Search Lessons">
+        <input matInput  #searchInput placeholder="Search Lessons">
     </mat-input-container>
 
     <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort

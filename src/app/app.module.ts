@@ -24,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
 import {FormsModule} from "@angular/forms";
 
+import 'rxjs/add/observable/fromEvent';
 
 @NgModule({
     declarations: [
