@@ -18,7 +18,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     course:Course;
 
-    constructor(private route: ActivatedRoute, private coursesService: CoursesService) {
+    constructor(private route: ActivatedRoute,
+                private coursesService: CoursesService) {
 
     }
 
