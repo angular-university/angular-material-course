@@ -8,7 +8,9 @@
         <input matInput  #searchInput placeholder="Search Lessons">
     </mat-input-container>
 
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <div class="spinner-container" *ngIf="dataSource?.loading$ | async">
+        <mat-spinner></mat-spinner>
+    </div>
 
     <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort
                matSortActive="seqNo" matSortDisableClear matSortDirection="asc">

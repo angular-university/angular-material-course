@@ -7,13 +7,14 @@ import {CoursesService} from "../services/courses.service";
 import {Subject} from "rxjs/Subject";
 import {finalize, catchError} from "rxjs/operators";
 import {of} from "rxjs/observable/of";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 
 export class LessonsDataSource extends DataSource<Lesson> {
 
-    private lessonsSubject = new Subject<Lesson[]>();
+    private lessonsSubject = new BehaviorSubject<Lesson[]>([]);
 
-    private loadingSubject = new Subject<boolean>();
+    private loadingSubject = new BehaviorSubject<boolean>(false);
 
     public loading$ = this.loadingSubject.asObservable();
 
@@ -34,10 +35,12 @@ export class LessonsDataSource extends DataSource<Lesson> {
     }
 
     connect(): Observable<Lesson[]> {
+        console.log("Connecting data source");
         return this.lessonsSubject.asObservable();
     }
 
     disconnect(): void {
+        console.log("Disconnecting data source");
         this.lessonsSubject.complete();
         this.loadingSubject.complete();
     }

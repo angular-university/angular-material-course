@@ -3,7 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {MatPaginator, MatSort} from "@angular/material";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
-import {debounceTime, distinctUntilChanged, startWith, tap} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, startWith, tap, timeout} from 'rxjs/operators';
 import {merge} from "rxjs/observable/merge";
 import {fromEvent} from 'rxjs/observable/fromEvent';
 import {LessonsDataSource} from "./lessons.datasource";
@@ -39,31 +39,37 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
 
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        setTimeout(() => {
 
-        // on sort or page change, load a new page
-        merge( this.sort.sortChange, this.paginator.page )
-            .pipe(
-                startWith(null),
-                tap(() => this.loadLessonsPage())
-            )
-            .subscribe();
+            this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-        // if a new search is available, load a new page
-        fromEvent(this.searchInput.nativeElement, 'keyup')
-            .pipe(
-                debounceTime(150),
-                distinctUntilChanged(),
-                tap(() => {
-                    this.paginator.pageIndex = 0;
-                    this.loadLessonsPage();
-                })
-            )
-            .subscribe();
+            // on sort or page change, load a new page
+            merge( this.sort.sortChange, this.paginator.page )
+                .pipe(
+                    startWith(null),
+                    tap(() => this.loadLessonsPage())
+                )
+                .subscribe();
+
+            // if a new search is available, load a new page
+            fromEvent(this.searchInput.nativeElement, 'keyup')
+                .pipe(
+                    debounceTime(150),
+                    distinctUntilChanged(),
+                    tap(() => {
+                        this.paginator.pageIndex = 0;
+                        this.loadLessonsPage();
+                    })
+                )
+                .subscribe();
+
+
+        });
     }
 
 
     loadLessonsPage() {
+        console.log("Loading lessons page ...");
         this.dataSource.loadLessons(this.course.id, this.searchInput.nativeElement.value, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize);
     }
 
