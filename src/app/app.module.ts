@@ -13,7 +13,10 @@ import { AboutComponent } from './about/about.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import {CourseComponent} from "./course/course.component";
-import {MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
+import {
+    MatInputModule, MatListModule, MatPaginatorModule, MatSidenavModule, MatSortModule, MatTableModule,
+    MatToolbarModule
+} from "@angular/material";
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
@@ -38,7 +41,12 @@ import {CourseResolver} from "./services/course.resolver";
         MatSidenavModule,
         MatListModule,
         MatToolbarModule,
-        AppRoutingModule
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        AppRoutingModule,
+
     ],
     providers: [
         CoursesService,
