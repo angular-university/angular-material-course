@@ -18,54 +18,19 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     course:Course;
 
-    displayedColumns = ["seqNo", "description", "duration"];
-
-    dataSource: LessonsDataSource;
-
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-
-    @ViewChild(MatSort) sort: MatSort;
-
-    @ViewChild('searchInput') searchInput: ElementRef;
-
     constructor(private route: ActivatedRoute, private coursesService: CoursesService) {
 
     }
 
     ngOnInit() {
+
         this.course = this.route.snapshot.data["course"];
-        this.dataSource = new LessonsDataSource(this.coursesService);
+
     }
 
     ngAfterViewInit() {
 
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-
-        // on sort or page change, load a new page
-        merge( this.sort.sortChange, this.paginator.page )
-            .pipe(
-                startWith(null),
-                tap(() => this.loadLessonsPage())
-            )
-            .subscribe();
-
-        // if a new search is available, load a new page
-        fromEvent(this.searchInput.nativeElement, 'keyup')
-            .pipe(
-                debounceTime(150),
-                distinctUntilChanged(),
-                tap(() => {
-                    this.paginator.pageIndex = 0;
-                    this.loadLessonsPage();
-                })
-            )
-            .subscribe();
     }
 
-
-    loadLessonsPage() {
-        console.log("Loading lessons page ...");
-        this.dataSource.loadLessons(this.course.id, this.searchInput.nativeElement.value, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize);
-    }
 
 }
