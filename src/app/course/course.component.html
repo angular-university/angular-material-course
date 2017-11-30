@@ -4,6 +4,13 @@
 
     <img class="course-thumbnail" [src]="course?.iconUrl">
 
+    <mat-input-container>
+
+        <input matInput placeholder="Search lessons" #input
+               (keyup)="searchLessons(input.value)">
+
+    </mat-input-container>
+
     <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
 
         <ng-container matColumnDef="seqNo">
