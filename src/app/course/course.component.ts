@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {MatPaginator, MatSort} from "@angular/material";
+import {MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
 import {debounceTime, distinctUntilChanged, startWith, tap, timeout} from 'rxjs/operators';
@@ -18,6 +18,10 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     course:Course;
 
+    dataSource = new MatTableDataSource([]);
+
+    displayedColumns= ["seqNo", "description", "duration"];
+
     constructor(private route: ActivatedRoute,
                 private coursesService: CoursesService) {
 
@@ -26,6 +30,9 @@ export class CourseComponent implements OnInit, AfterViewInit {
     ngOnInit() {
 
         this.course = this.route.snapshot.data["course"];
+
+        this.coursesService.findAllCourseLessons(this.course.id)
+            .subscribe(lessons => this.dataSource.data = lessons);
 
     }
 
