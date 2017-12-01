@@ -6,7 +6,6 @@ import {CoursesService} from "../services/courses.service";
 import {debounceTime, distinctUntilChanged, startWith, tap, timeout} from 'rxjs/operators';
 import {merge} from "rxjs/observable/merge";
 import {fromEvent} from 'rxjs/observable/fromEvent';
-import {LessonsDataSource} from "./lessons.datasource";
 
 
 @Component({
