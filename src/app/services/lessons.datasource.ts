@@ -6,7 +6,7 @@ import {Observable} from "rxjs/Observable";
 import {Lesson} from "../model/lesson";
 import {CoursesService} from "./courses.service";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {catchError} from "rxjs/operators";
+import {catchError, finalize} from "rxjs/operators";
 import {of} from "rxjs/observable/of";
 
 
@@ -14,6 +14,10 @@ import {of} from "rxjs/observable/of";
 export class LessonsDataSource implements DataSource<Lesson> {
 
     private lessonsSubject = new BehaviorSubject<Lesson[]>([]);
+
+    private loadingSubject = new BehaviorSubject<boolean>(false);
+
+    public loading$ = this.loadingSubject.asObservable();
 
     constructor(private coursesService: CoursesService) {
 
@@ -25,9 +29,12 @@ export class LessonsDataSource implements DataSource<Lesson> {
                 pageIndex:number,
                 pageSize:number) {
 
+        this.loadingSubject.next(true);
+
         this.coursesService.findLessons(courseId, filter, sortDirection,
             pageIndex, pageSize).pipe(
-                catchError(() => of([]))
+                catchError(() => of([])),
+                finalize(() =>this.loadingSubject.next(false))
             )
             .subscribe(lessons => this.lessonsSubject.next(lessons));
 
