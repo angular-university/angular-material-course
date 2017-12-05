@@ -33,7 +33,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         this.dataSource = new LessonsDataSource(this.coursesService);
 
-        this.dataSource.loadLessons(this.course.id, 'hello','desc', 0, 3);
+        this.dataSource.loadLessons(this.course.id, '','asc', 0, 3);
 
     }
 
