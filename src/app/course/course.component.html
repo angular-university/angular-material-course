@@ -17,7 +17,8 @@
 
     </div>
 
-    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort>
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource"
+               matSort matSortActive="seqNo" matSortDirection="asc" matSortDisableClear>
 
         <ng-container matColumnDef="seqNo">
 
