@@ -34,7 +34,7 @@ export class LessonsDataSource implements DataSource<Lesson> {
         this.coursesService.findLessons(courseId, filter, sortDirection,
             pageIndex, pageSize).pipe(
                 catchError(() => of([])),
-                finalize(() =>this.loadingSubject.next(false))
+                finalize(() => this.loadingSubject.next(false))
             )
             .subscribe(lessons => this.lessonsSubject.next(lessons));
 
