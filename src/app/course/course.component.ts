@@ -24,6 +24,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
+    @ViewChild(MatSort) sort: MatSort;
+
     constructor(private route: ActivatedRoute,
                 private coursesService: CoursesService) {
 
@@ -35,15 +37,20 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         this.dataSource = new LessonsDataSource(this.coursesService);
 
-
     }
 
     ngAfterViewInit() {
 
-        this.paginator.page.pipe(
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+
+        merge(this.sort.sortChange, this.paginator.page)
+        .pipe(
             startWith(null),
-            tap(() => this.dataSource.loadLessons(this.course.id, '','asc',
-                this.paginator.pageIndex, this.paginator.pageSize))
+            tap(() => this.dataSource.loadLessons(
+                this.course.id, '',
+                this.sort.direction,
+                this.paginator.pageIndex,
+                this.paginator.pageSize))
         )
         .subscribe();
 

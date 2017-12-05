@@ -17,11 +17,11 @@
 
     </div>
 
-    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="seqNo">
 
-            <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
 
             <mat-cell *matCellDef="let lesson">{{lesson.seqNo}}</mat-cell>
 
