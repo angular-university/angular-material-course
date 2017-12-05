@@ -22,6 +22,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     displayedColumns= ["seqNo", "description", "duration"];
 
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+
     constructor(private route: ActivatedRoute,
                 private coursesService: CoursesService) {
 
@@ -33,11 +35,18 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         this.dataSource = new LessonsDataSource(this.coursesService);
 
-        this.dataSource.loadLessons(this.course.id, '','asc', 0, 3);
 
     }
 
     ngAfterViewInit() {
+
+        this.paginator.page.pipe(
+            startWith(null),
+            tap(() => this.dataSource.loadLessons(this.course.id, '','asc',
+                this.paginator.pageIndex, this.paginator.pageSize))
+        )
+        .subscribe();
+
 
     }
 
