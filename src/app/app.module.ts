@@ -15,7 +15,8 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
 import {CourseComponent} from "./course/course.component";
 import {
     MatDialogModule,
-    MatInputModule, MatListModule, MatPaginatorModule, MatProgressSpinnerModule, MatSidenavModule, MatSortModule,
+    MatInputModule, MatListModule, MatPaginatorModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule,
+    MatSortModule,
     MatTableModule,
     MatToolbarModule
 } from "@angular/material";
@@ -53,6 +54,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         MatProgressSpinnerModule,
         MatDialogModule,
         AppRoutingModule,
+        MatSelectModule,
         ReactiveFormsModule
     ],
     providers: [

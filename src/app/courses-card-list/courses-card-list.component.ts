@@ -20,7 +20,7 @@ export class CoursesCardListComponent implements OnInit {
 
     }
 
-    editCourse({description, longDescription}:Course) {
+    editCourse({description, longDescription, category}:Course) {
 
         const dialogConfig: MatDialogConfig = {
             // height: '400px',
@@ -29,7 +29,8 @@ export class CoursesCardListComponent implements OnInit {
             disableClose:true,
             data: {
                 description,
-                longDescription
+                longDescription,
+                category
             }
         };
 
