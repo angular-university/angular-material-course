@@ -23,6 +23,7 @@ import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -51,7 +52,8 @@ import { CourseDialogComponent } from './course-dialog/course-dialog.component';
         MatSortModule,
         MatProgressSpinnerModule,
         MatDialogModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     providers: [
         CoursesService,
