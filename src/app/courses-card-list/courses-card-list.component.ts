@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Course} from "../model/course";
-import {MatDialog} from "@angular/material";
+import {MatDialog, MatDialogConfig} from "@angular/material";
 import {CourseDialogComponent} from "../course-dialog/course-dialog.component";
 
 @Component({
@@ -18,19 +18,21 @@ export class CoursesCardListComponent implements OnInit {
 
     ngOnInit() {
 
-
-
     }
 
-    editCourse() {
+    editCourse(course: Course) {
 
-        let dialogRef = this.dialog.open(CourseDialogComponent, {
+        const dialogConfig: MatDialogConfig = {
             // height: '400px',
             // width: '600px',
-            data: {payload: [1, 2, 3]}
-        });
+            autoFocus: true,
+            disableClose:true,
+            data: {...course}
+        };
 
-        dialogRef.backdropClick().subscribe(() => console.log("clicked on backdrop"));
+
+        let dialogRef = this.dialog.open(CourseDialogComponent, dialogConfig);
+
 
         dialogRef.afterClosed().subscribe(result => {
             console.log('Dialog result: ', result);
