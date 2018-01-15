@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit, ViewEncapsulation} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 import {Course} from "../model/course";
+import {FormBuilder, Validators, FormGroup} from "@angular/forms";
 
 @Component({
     selector: 'course-dialog',
@@ -10,27 +11,34 @@ import {Course} from "../model/course";
 })
 export class CourseDialogComponent implements OnInit {
 
-    course:Course;
+    form: FormGroup;
+    title:string;
 
-    constructor(private dialogRef: MatDialogRef<CourseDialogComponent>, @Inject(MAT_DIALOG_DATA) data: any) {
+    constructor(
+        fb: FormBuilder,
+        private dialogRef: MatDialogRef<CourseDialogComponent>,
+        @Inject(MAT_DIALOG_DATA) courseData: any) {
 
-        this.course = data;
+        this.title = courseData.description;
 
+        this.form = fb.group({
+            "description":["", Validators.required]
+        });
+
+        console.log("courseData", courseData);
+
+        this.form.setValue(courseData);
     }
+
 
 
 /*
 
 
 
-description: "Angular for Beginners",
-iconUrl: "https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png",
-courseListIcon: "https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png",
 longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular", …}
 category:"BEGINNER"
-courseListIcon:"https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png"
-description:"Angular for Beginners"
-iconUrl:"https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png"
+
 
 
 
@@ -46,7 +54,8 @@ iconUrl:"https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginn
 
     close() {
 
-        this.dialogRef.close(this.course);
+        this.dialogRef.close(this.form.value);
+
 
     }
 

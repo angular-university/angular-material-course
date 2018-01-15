@@ -1,11 +1,11 @@
 
 
-<h2 mat-dialog-title>{{course.description}}</h2>
+<h2 mat-dialog-title>{{title}}</h2>
 
-<mat-dialog-content>
+<mat-dialog-content [formGroup]="form">
 
     <mat-form-field>
-        <input matInput  placeholder="Description" [ngModel]="course.description">
+        <input matInput  placeholder="Description" formControlName="description">
     </mat-form-field>
 
 </mat-dialog-content>

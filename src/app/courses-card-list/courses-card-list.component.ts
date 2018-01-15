@@ -27,7 +27,9 @@ export class CoursesCardListComponent implements OnInit {
             // width: '600px',
             autoFocus: true,
             disableClose:true,
-            data: {...course}
+            data: {
+                description: course.description
+            }
         };
 
 
