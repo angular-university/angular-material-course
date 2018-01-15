@@ -6,20 +6,23 @@
 
     <mat-form-field>
 
-        <input matInput  placeholder="Description" formControlName="description">
+        <input matInput  placeholder="Title" formControlName="description">
 
     </mat-form-field>
 
     <mat-form-field>
 
-        <textarea matInput formControlName="longDescription"></textarea>
+        <textarea matInput placeholder="Description" formControlName="longDescription"></textarea>
 
     </mat-form-field>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button class="mat-raised-button mat-primary" (click)="close()">Close</button>
+
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+
+    <button class="mat-raised-button" (click)="close()">Close</button>
 
 </mat-dialog-actions>
 

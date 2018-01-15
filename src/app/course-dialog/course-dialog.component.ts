@@ -6,8 +6,7 @@ import {FormBuilder, Validators, FormGroup} from "@angular/forms";
 @Component({
     selector: 'course-dialog',
     templateUrl: './course-dialog.component.html',
-    styleUrls: ['./course-dialog.component.css'],
-    encapsulation: ViewEncapsulation.None
+    styleUrls: ['./course-dialog.component.css']
 })
 export class CourseDialogComponent implements OnInit {
 
@@ -51,11 +50,15 @@ category:"BEGINNER"
     }
 
 
-    close() {
+    save() {
 
         this.dialogRef.close(this.form.value);
 
 
+    }
+
+    close() {
+        this.dialogRef.close();
     }
 
 

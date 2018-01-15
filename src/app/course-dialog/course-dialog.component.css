@@ -1,0 +1,10 @@
+
+
+.mat-form-field {
+    display: block;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
