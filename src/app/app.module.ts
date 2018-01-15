@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import {CourseComponent} from "./course/course.component";
 import {
+    MatDialogModule,
     MatInputModule, MatListModule, MatPaginatorModule, MatProgressSpinnerModule, MatSidenavModule, MatSortModule,
     MatTableModule,
     MatToolbarModule
@@ -21,6 +22,7 @@ import {
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +30,8 @@ import {CourseResolver} from "./services/course.resolver";
         HomeComponent,
         AboutComponent,
         CourseComponent,
-        CoursesCardListComponent
+        CoursesCardListComponent,
+        CourseDialogComponent
     ],
     imports: [
         BrowserModule,
@@ -47,13 +50,15 @@ import {CourseResolver} from "./services/course.resolver";
         MatPaginatorModule,
         MatSortModule,
         MatProgressSpinnerModule,
+        MatDialogModule,
         AppRoutingModule
     ],
     providers: [
         CoursesService,
         CourseResolver
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [CourseDialogComponent]
 })
 export class AppModule {
 }
