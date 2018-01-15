@@ -11,37 +11,28 @@ import {FormBuilder, Validators, FormGroup} from "@angular/forms";
 export class CourseDialogComponent implements OnInit {
 
     form: FormGroup;
-    title:string;
+    title: string;
 
-    constructor(
-        fb: FormBuilder,
-        private dialogRef: MatDialogRef<CourseDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) courseFormData: any) {
+    constructor(fb: FormBuilder,
+                private dialogRef: MatDialogRef<CourseDialogComponent>,
+                @Inject(MAT_DIALOG_DATA) courseFormData: any) {
 
         this.title = courseFormData.description;
 
         this.form = fb.group({
-            "description":["", Validators.required],
-            "longDescription":["", Validators.required]
+            "description": ["", Validators.required],
+            "longDescription": ["", Validators.required]
         });
 
         this.form.setValue(courseFormData);
     }
 
 
+    /*
 
-/*
+    category:"BEGINNER"
 
-
-
-longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular", …}
-category:"BEGINNER"
-
-
-
-
-
-*/
+    */
 
 
     ngOnInit() {
