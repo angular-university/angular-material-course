@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import {CourseComponent} from "./course/course.component";
 import {
+    MatDatepickerModule,
     MatDialogModule,
     MatInputModule, MatListModule, MatPaginatorModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule,
     MatSortModule,
@@ -25,6 +26,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CourseResolver} from "./services/course.resolver";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatMomentDateModule} from "@angular/material-moment-adapter";
 
 @NgModule({
     declarations: [
@@ -55,6 +57,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         MatDialogModule,
         AppRoutingModule,
         MatSelectModule,
+        MatDatepickerModule,
+        MatMomentDateModule,
         ReactiveFormsModule
     ],
     providers: [

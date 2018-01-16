@@ -20,6 +20,16 @@
 
     <mat-form-field>
 
+        <input matInput [matDatepicker]="myDatepicker" formControlName="releasedAt">
+
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+
+        <mat-datepicker #myDatepicker></mat-datepicker>
+
+    </mat-form-field>
+
+    <mat-form-field>
+
         <textarea matInput placeholder="Description" formControlName="longDescription"></textarea>
 
     </mat-form-field>

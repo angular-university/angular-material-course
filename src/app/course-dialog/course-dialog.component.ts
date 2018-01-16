@@ -2,6 +2,7 @@ import {Component, Inject, OnInit, ViewEncapsulation} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 import {Course} from "../model/course";
 import {FormBuilder, Validators, FormGroup} from "@angular/forms";
+import * as moment from 'moment';
 
 @Component({
     selector: 'course-dialog',
@@ -22,17 +23,12 @@ export class CourseDialogComponent implements OnInit {
         this.form = fb.group({
             "description": [description, Validators.required],
             "longDescription": [longDescription, Validators.required],
-            "category": [category, Validators.required]
+            "category": [category, Validators.required],
+            "releasedAt": [moment(), Validators.required],
         });
 
     }
 
-
-    /*
-
-    category:"BEGINNER"
-
-    */
 
 
     ngOnInit() {
