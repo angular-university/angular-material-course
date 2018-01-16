@@ -24,7 +24,6 @@ export class CoursesCardListComponent implements OnInit {
 
         const dialogConfig: MatDialogConfig = {
             // height: '400px',
-            width: '600px',
             autoFocus: true,
             disableClose:true,
             data: {
