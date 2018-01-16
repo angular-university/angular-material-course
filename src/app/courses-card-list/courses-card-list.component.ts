@@ -13,7 +13,7 @@ export class CoursesCardListComponent implements OnInit {
     @Input()
     courses: Course[];
 
-    constructor(private dialog: MatDialog) {
+    constructor() {
     }
 
     ngOnInit() {
@@ -21,24 +21,6 @@ export class CoursesCardListComponent implements OnInit {
     }
 
     editCourse({description, longDescription, category}:Course) {
-
-        const dialogConfig: MatDialogConfig = {
-            autoFocus: true,
-            disableClose:true,
-            data: {
-                description,
-                longDescription,
-                category
-            }
-        };
-
-
-        let dialogRef = this.dialog.open(CourseDialogComponent, dialogConfig);
-
-
-        dialogRef.afterClosed().subscribe(result => {
-            console.log('Dialog result: ', result);
-        });
 
     }
 

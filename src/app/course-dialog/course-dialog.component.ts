@@ -11,42 +11,24 @@ import * as moment from 'moment';
 })
 export class CourseDialogComponent implements OnInit {
 
-    form: FormGroup;
-    title: string;
 
-    constructor(fb: FormBuilder,
-                private dialogRef: MatDialogRef<CourseDialogComponent>,
-                @Inject(MAT_DIALOG_DATA) {description,longDescription, category }: Course) {
+    constructor() {
 
-        this.title = description;
-
-        this.form = fb.group({
-            "description": [description, Validators.required],
-            "longDescription": [longDescription, Validators.required],
-            "category": [category, Validators.required],
-            "releasedAt": [moment(), Validators.required],
-        });
 
     }
 
-
-
     ngOnInit() {
-
 
     }
 
 
     save() {
 
-        this.dialogRef.close(this.form.value);
-
 
     }
 
     close() {
-        this.dialogRef.close();
-    }
 
+    }
 
 }
