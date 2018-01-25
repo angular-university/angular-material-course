@@ -3,7 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
-import {debounceTime, distinctUntilChanged, startWith, tap, timeout} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, startWith, tap, delay} from 'rxjs/operators';
 import {merge} from "rxjs/observable/merge";
 import {fromEvent} from 'rxjs/observable/fromEvent';
 import {LessonsDataSource} from "../services/lessons.datasource";
@@ -60,6 +60,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
         merge(this.sort.sortChange, this.paginator.page)
         .pipe(
             startWith(null),
+            delay(0),
             tap(() => this.loadLessonsPage())
         )
         .subscribe();
