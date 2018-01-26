@@ -42,6 +42,15 @@
 
     </mat-form-field>
 
+    <mat-form-field>
+
+        <textarea matInput placeholder="Description"
+            formControlName="longDescription">
+
+        </textarea>
+
+    </mat-form-field>
+
 
 </mat-dialog-content>
 
@@ -50,6 +59,11 @@
     <button class="mat-raised-button"
             (click)="close()">
         Close
+    </button>
+
+    <button class="mat-raised-button mat-primary"
+            (click)="save()">
+        Save
     </button>
 
 </mat-dialog-actions>
