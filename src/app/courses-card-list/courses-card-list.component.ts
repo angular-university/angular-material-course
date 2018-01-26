@@ -13,7 +13,7 @@ export class CoursesCardListComponent implements OnInit {
     @Input()
     courses: Course[];
 
-    constructor() {
+    constructor(private dialog: MatDialog) {
     }
 
     ngOnInit() {
@@ -22,6 +22,25 @@ export class CoursesCardListComponent implements OnInit {
 
     editCourse({description, longDescription, category}:Course) {
 
+        const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+
+        dialogConfig.data = {
+            description, longDescription, category
+        };
+
+        this.dialog.open(CourseDialogComponent, dialogConfig);
+
     }
 
 }
+
+
+
+
+
+
+
+
+

@@ -11,9 +11,12 @@ import * as moment from 'moment';
 })
 export class CourseDialogComponent implements OnInit {
 
+    description:string;
 
-    constructor() {
+    constructor(
+        @Inject(MAT_DIALOG_DATA) {description,longDescription, category}:Course ) {
 
+        this.description = description;
 
     }
 
