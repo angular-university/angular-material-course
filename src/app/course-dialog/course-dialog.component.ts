@@ -11,12 +11,20 @@ import * as moment from 'moment';
 })
 export class CourseDialogComponent implements OnInit {
 
+    form: FormGroup;
     description:string;
 
     constructor(
+        private fb: FormBuilder,
+        private dialogRef: MatDialogRef<CourseDialogComponent>,
         @Inject(MAT_DIALOG_DATA) {description,longDescription, category}:Course ) {
 
         this.description = description;
+
+
+        this.form = fb.group({
+            description: [description, Validators.required]
+        });
 
     }
 
@@ -31,6 +39,7 @@ export class CourseDialogComponent implements OnInit {
     }
 
     close() {
+        this.dialogRef.close();
 
     }
 
