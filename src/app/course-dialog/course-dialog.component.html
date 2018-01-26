@@ -28,6 +28,21 @@
 
     </mat-form-field>
 
+    <mat-form-field>
+
+        <input matInput [matDatepicker]="myDatepicker"
+            formControlName="releasedAt">
+
+        <mat-datepicker-toggle matSuffix
+                               [for]="myDatepicker">
+
+        </mat-datepicker-toggle>
+
+        <mat-datepicker #myDatepicker></mat-datepicker>
+
+    </mat-form-field>
+
+
 </mat-dialog-content>
 
 <mat-dialog-actions>

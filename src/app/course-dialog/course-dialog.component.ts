@@ -25,7 +25,8 @@ export class CourseDialogComponent implements OnInit {
 
         this.form = fb.group({
             description: [description, Validators.required],
-            "category": [category, Validators.required],
+            category: [category, Validators.required],
+            releasedAt: [moment(), Validators.required]
         });
 
     }
