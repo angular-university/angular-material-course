@@ -17,13 +17,15 @@ export class CourseDialogComponent implements OnInit {
     constructor(
         private fb: FormBuilder,
         private dialogRef: MatDialogRef<CourseDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) {description,longDescription, category}:Course ) {
+        @Inject(MAT_DIALOG_DATA) {description,longDescription,
+            category}:Course ) {
 
         this.description = description;
 
 
         this.form = fb.group({
-            description: [description, Validators.required]
+            description: [description, Validators.required],
+            "category": [category, Validators.required],
         });
 
     }
