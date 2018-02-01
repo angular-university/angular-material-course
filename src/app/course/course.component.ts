@@ -39,6 +39,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         this.dataSource = new LessonsDataSource(this.coursesService);
 
+        this.dataSource.loadLessons(this.course.id, '', 'asc', 0, 3);
+
     }
 
     ngAfterViewInit() {
@@ -59,8 +61,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
         merge(this.sort.sortChange, this.paginator.page)
         .pipe(
-            startWith(null),
-            delay(0),
             tap(() => this.loadLessonsPage())
         )
         .subscribe();
