@@ -61,9 +61,9 @@ To run the frontend part of our code, we will use the Angular CLI:
 
     npm start 
 
-The application is visible at port 4200, but you need to use HTTPS - [https://localhost:4200](https://localhost:4200)
+The application is visible at port 4200: [http://localhost:4200](http://localhost:4200)
 
-This application uses a self-signed certificate, so you will need to accept it using the browser. If you are using Chrome, you will need to click Advanced and then choose "Proceed to localhost".
+
 
 # Important 
 
@@ -73,11 +73,11 @@ At certain points along the course, you will be asked to checkout other remote b
 
     git branch -a
 
-  The remote branches have their starting in origin, such as for example section-1.
+  The remote branches have their starting in origin, such as for example 1-navigation-and-containers.
 
 We can checkout the remote branch and start tracking it with a local branch that has the same name, by using the following command:
 
-      git checkout -b section-1 origin/section-1
+      git checkout -b section-1 origin/1-navigation-and-containers
 
 It's also possible to download a ZIP file for a given branch,  using the branch dropdown on this page on the top left, and then selecting the Clone or Download / Download as ZIP button.
 
@@ -96,8 +96,6 @@ If you are looking for the [Angular Security Masterclass](https://angular-univer
 [Angular Security Masterclass](https://github.com/angular-university/angular-security-course).
 
 ![Angular Security Masterclass](https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png)
-
-
 
 # Angular Advanced Library Laboratory Course
 
