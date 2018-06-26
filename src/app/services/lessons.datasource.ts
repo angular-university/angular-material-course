@@ -11,7 +11,7 @@ import {of} from "rxjs/observable/of";
 
 
 
-export class LessonsDataSource implements DataSource<Lesson> {
+export class LessonsDataSource extends DataSource<Lesson> {
 
     private lessonsSubject = new BehaviorSubject<Lesson[]>([]);
 
@@ -20,7 +20,7 @@ export class LessonsDataSource implements DataSource<Lesson> {
     public loading$ = this.loadingSubject.asObservable();
 
     constructor(private coursesService: CoursesService) {
-
+        super();
     }
 
     loadLessons(courseId:number,
