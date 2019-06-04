@@ -2,12 +2,10 @@
 
 
 import {CollectionViewer, DataSource} from "@angular/cdk/collections";
-import {Observable} from "rxjs/Observable";
+import {Observable, BehaviorSubject, of} from "rxjs";
 import {Lesson} from "../model/lesson";
 import {CoursesService} from "./courses.service";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {catchError, finalize} from "rxjs/operators";
-import {of} from "rxjs/observable/of";
 
 
 

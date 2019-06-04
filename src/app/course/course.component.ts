@@ -6,8 +6,7 @@ import { MatTableDataSource } from "@angular/material/table";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
 import {debounceTime, distinctUntilChanged, startWith, tap, delay} from 'rxjs/operators';
-import {merge} from "rxjs/observable/merge";
-import {fromEvent} from 'rxjs/observable/fromEvent';
+import {merge, fromEvent} from "rxjs";
 import {LessonsDataSource} from "../services/lessons.datasource";
 
 
