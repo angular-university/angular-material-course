@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["es2017"]
+  }
+}
