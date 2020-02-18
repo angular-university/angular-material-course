@@ -18,7 +18,7 @@ app.route('/api/lessons').get(searchLessons);
 
 
 
-const httpServer = app.listen(9000, () => {
+const httpServer:any = app.listen(9000, () => {
     console.log("HTTP REST API Server running at http://localhost:" + httpServer.address().port);
 });
 
