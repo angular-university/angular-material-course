@@ -1,7 +1,7 @@
 <mat-sidenav-container fullscreen>
 
-    <mat-sidenav #start>
-        <mat-nav-list>
+    <mat-sidenav #sidenav>
+        <mat-nav-list (click)="sidenav.close()">
 
             <a mat-list-item routerLink="/">
                 <mat-icon>library_books</mat-icon>
@@ -27,7 +27,7 @@
     </mat-sidenav>
 
     <mat-toolbar color="primary">
-        <button mat-icon-button (click)="start.open('mouse')">
+        <button mat-icon-button (click)="sidenav.open()">
             <mat-icon>menu</mat-icon>
         </button>
     </mat-toolbar>
