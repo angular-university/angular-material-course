@@ -30,6 +30,10 @@ import {CourseResolver} from "./services/course.resolver";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {CreateCourseComponent} from './create-course/create-course.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {CreateCourseStep1Component} from './create-course/create-course-step-1/create-course-step-1.component';
+import {CreateCourseStep2Component} from './create-course/create-course-step-2/create-course-step-2.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +42,10 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
         AboutComponent,
         CourseComponent,
         CoursesCardListComponent,
-        CourseDialogComponent
+        CourseDialogComponent,
+        CreateCourseComponent,
+        CreateCourseStep1Component,
+        CreateCourseStep2Component
     ],
     imports: [
         BrowserModule,
@@ -57,6 +64,7 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
         MatPaginatorModule,
         MatSortModule,
         MatProgressSpinnerModule,
+        MatStepperModule,
         MatDialogModule,
         AppRoutingModule,
         MatSelectModule,
