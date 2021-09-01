@@ -35,6 +35,7 @@
 .lessons-table {
     min-height: 360px;
     margin-top: 10px;
+  width: 100%;
 }
 
 .spinner-container mat-spinner {

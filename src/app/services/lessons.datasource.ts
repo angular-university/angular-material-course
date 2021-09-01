@@ -22,14 +22,13 @@ export class LessonsDataSource implements DataSource<Lesson> {
     }
 
     loadLessons(courseId:number,
-                filter:string,
                 sortDirection:string,
                 pageIndex:number,
                 pageSize:number) {
 
         this.loadingSubject.next(true);
 
-        this.coursesService.findLessons(courseId, filter, sortDirection,
+        this.coursesService.findLessons(courseId, sortDirection,
             pageIndex, pageSize).pipe(
                 catchError(() => of([])),
                 finalize(() => this.loadingSubject.next(false))
