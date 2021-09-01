@@ -34,6 +34,8 @@ import {CreateCourseComponent} from './create-course/create-course.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {CreateCourseStep1Component} from './create-course/create-course-step-1/create-course-step-1.component';
 import {CreateCourseStep2Component} from './create-course/create-course-step-2/create-course-step-2.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
     declarations: [
@@ -68,6 +70,8 @@ import {CreateCourseStep2Component} from './create-course/create-course-step-2/c
         MatDialogModule,
         AppRoutingModule,
         MatSelectModule,
+        MatCheckboxModule,
+        MatRadioModule,
         MatDatepickerModule,
         MatMomentDateModule,
         ReactiveFormsModule
