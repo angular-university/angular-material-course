@@ -17,6 +17,7 @@ export class CreateCourseStep1Component {
     ]],
     releasedAt: [new Date(), Validators.required],
     category: ['BEGINNER', Validators.required],
+    courseType: ['premium', Validators.required],
     downloadsAllowed: [false, Validators.requiredTrue],
     longDescription: ['', [Validators.required, Validators.minLength(3)]]
   });

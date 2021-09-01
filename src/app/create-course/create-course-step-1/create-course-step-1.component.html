@@ -9,9 +9,18 @@
     </mat-hint>
 
     <mat-error *ngIf="courseTitle.errors?.titleExists">
-      This title is already being used.</mat-error>
+      This title is already being used.
+    </mat-error>
 
   </mat-form-field>
+
+  <mat-radio-group class="course-type" formControlName="courseType">
+
+    <mat-radio-button value="free">Free</mat-radio-button>
+
+    <mat-radio-button value="premium">Premium</mat-radio-button>
+
+  </mat-radio-group>
 
   <mat-form-field>
 
