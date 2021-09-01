@@ -80,8 +80,7 @@ import {MatRadioModule} from '@angular/material/radio';
         CoursesService,
         CourseResolver
     ],
-    bootstrap: [AppComponent],
-    entryComponents: [CourseDialogComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
