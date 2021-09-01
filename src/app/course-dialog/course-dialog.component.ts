@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit, ViewEncapsulation} from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material/dialog';
 import {Course} from "../model/course";
 import {FormBuilder, Validators, FormGroup} from "@angular/forms";
 import * as moment from 'moment';
@@ -46,3 +46,21 @@ export class CourseDialogComponent implements OnInit {
     }
 
 }
+
+
+export function openEditCourseDialog(dialog: MatDialog, course:Course) {
+
+  const dialogConfig = new MatDialogConfig();
+
+  dialogConfig.disableClose = true;
+  dialogConfig.autoFocus = true;
+
+  dialogConfig.data = {
+    ...course
+  };
+
+  const dialogRef = dialog.open(CourseDialogComponent, dialogConfig);
+
+  return dialogRef.afterClosed();
+}
+
