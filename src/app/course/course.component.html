@@ -25,7 +25,15 @@
 
     </ng-container>
 
-    <mat-text-column name="description"></mat-text-column>
+    <!--mat-text-column name="description" ></mat-text-column-->
+
+    <ng-container matColumnDef="description">
+
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+
+      <td mat-cell *matCellDef="let lesson">{{lesson.description}}</td>
+
+    </ng-container>
 
     <ng-container matColumnDef="duration">
 
