@@ -5,7 +5,7 @@ This repository contains the code of the [Angular Material In Depth] video cours
 
 This course repository is updated to Angular 12:
 
-![Angular Material Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
+![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
 
 You can find the starting point of the course in the [1-start branch](https://github.com/angular-university/angular-material-course/tree/1-start).
 
