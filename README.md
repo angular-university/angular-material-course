@@ -9,11 +9,10 @@ The new version of the course is called [Angular Material In Depth](https://angu
 
 You can find the starting point of this new version of the course in the [1-start branch](https://github.com/angular-university/angular-material-course/tree/1-start).
 
-On the other hand, if you are looking for the previous version of the course (soon to be archived) and called the Angular Material Course, 
+On the other hand, if you are looking for the previous version of the course (soon to be archived) and called the Angular Material Course, then you can start your course with the initial branch [1-navigation-and-containers](https://github.com/angular-university/angular-material-course/tree/1-navigation-and-containers).
 
 ![Angular Material Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png)
 
-then you can start your course with the initial branch [1-navigation-and-containers](https://github.com/angular-university/angular-material-course/tree/1-navigation-and-containers).
 
 This course repository is updated to Angular v12.
 
