@@ -33,9 +33,13 @@
 }
 
 .lessons-table {
-    min-height: 360px;
-    margin-top: 10px;
+  min-height: 360px;
+  margin-top: 10px;
   width: 100%;
+  tr:hover {
+    background: whitesmoke;
+    cursor: pointer;
+  }
 }
 
 .spinner-container mat-spinner {

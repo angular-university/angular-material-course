@@ -13,7 +13,7 @@ import {LessonsDataSource} from "../services/lessons.datasource";
 @Component({
     selector: 'course',
     templateUrl: './course.component.html',
-    styleUrls: ['./course.component.css']
+    styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit, AfterViewInit {
 
