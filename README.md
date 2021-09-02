@@ -1,12 +1,21 @@
 
-## Angular Material Course
+## IMPORTANT
 
-This repository contains the code of the [Angular Material Course](https://angular-university.io/course/angular-material-course).
+This repository currently contains the code for **two versions** of the course. 
 
-This course repository is updated to Angular v12, and there is a  package-lock.json file available, for avoiding semantic versioning installation issues.
+The new version of the course is called [Angular Material In Depth](https://angular-university.io/course/angular-material-course):
+
+![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
+
+You can find the starting point of this new version of the course in the [1-start branch](https://github.com/angular-university/angular-material-course/tree/1-start).
+
+On the other hand, if you are looking for the previous version of the course (soon to be archived) and called the Angular Material Course, 
 
 ![Angular Material Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png)
 
+then you can start your course with the initial branch [1-navigation-and-containers](https://github.com/angular-university/angular-material-course/tree/1-navigation-and-containers).
+
+This course repository is updated to Angular v12.
 
 # Installation pre-requisites
 
