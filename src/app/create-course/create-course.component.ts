@@ -5,12 +5,7 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 @Component({
   selector: "create-course",
   styleUrls: ["create-course.component.scss"],
-  templateUrl: "create-course.component.html",
-  providers: [
-    {
-      provide: STEPPER_GLOBAL_OPTIONS, useValue: {showError:true}
-    }
-  ]
+  templateUrl: "create-course.component.html"
 })
 export class CreateCourseComponent {
 

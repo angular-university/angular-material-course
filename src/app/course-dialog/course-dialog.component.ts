@@ -11,24 +11,8 @@ import * as moment from 'moment';
 })
 export class CourseDialogComponent implements OnInit {
 
-    form: FormGroup;
-    description:string;
+    constructor(private fb: FormBuilder) {
 
-    constructor(
-        private fb: FormBuilder,
-        private dialogRef: MatDialogRef<CourseDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) {description,longDescription,
-            category}:Course ) {
-
-        this.description = description;
-
-
-        this.form = fb.group({
-            description: [description, Validators.required],
-            category: [category, Validators.required],
-            releasedAt: [moment(), Validators.required],
-            longDescription: [longDescription,Validators.required]
-        });
 
     }
 
@@ -36,31 +20,5 @@ export class CourseDialogComponent implements OnInit {
 
     }
 
-
-    save() {
-        this.dialogRef.close(this.form.value);
-    }
-
-    close() {
-        this.dialogRef.close();
-    }
-
-}
-
-
-export function openEditCourseDialog(dialog: MatDialog, course:Course) {
-
-  const dialogConfig = new MatDialogConfig();
-
-  dialogConfig.disableClose = true;
-  dialogConfig.autoFocus = true;
-
-  dialogConfig.data = {
-    ...course
-  };
-
-  const dialogRef = dialog.open(CourseDialogComponent, dialogConfig);
-
-  return dialogRef.afterClosed();
 }
 
