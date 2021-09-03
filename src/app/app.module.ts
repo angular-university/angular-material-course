@@ -37,6 +37,7 @@ import {CreateCourseStep2Component} from './create-course/create-course-step-2/c
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
     declarations: [
@@ -73,6 +74,7 @@ import {MatNativeDateModule} from '@angular/material/core';
         MatSelectModule,
         MatCheckboxModule,
         MatRadioModule,
+        MatSliderModule,
         MatDatepickerModule,
         MatNativeDateModule,
         ReactiveFormsModule
