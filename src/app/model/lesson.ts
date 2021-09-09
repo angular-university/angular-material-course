@@ -6,4 +6,5 @@ export interface Lesson {
     duration: string;
     seqNo: number;
     courseId: number;
+    longDescription:string;
 }
