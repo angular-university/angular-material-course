@@ -23,6 +23,17 @@ export class CreateCourseStep1Component {
     longDescription: ['', [Validators.required, Validators.minLength(3)]]
   });
 
+  dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
+
+      const date = cellDate.getDate();
+
+      if (view == 'month') {
+          return (date == 1) ? 'highlight-date' : "";
+      }
+
+      return "";
+  }
+
   constructor(private fb: FormBuilder) {
 
   }
