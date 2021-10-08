@@ -51,7 +51,7 @@
 
     </mat-form-field>
 
-    <mat-form-field apperance="outline">
+    <mat-form-field appearance="outline">
 
         <input matInput formControlName="releasedAt"
                placeholder="Release date" [matDatepicker]="releasedAtPicker">
@@ -75,6 +75,18 @@
         Downloads allowed?
 
     </mat-checkbox>
+
+    <mat-form-field appearance="outline">
+
+        <textarea matInput placeholder="Description" formControlName="longDescription"
+
+                  cdkTextareaAutosize [cdkAutosizeMinRows]="2"
+                  [cdkAutosizeMaxRows]="5">
+
+
+        </textarea>
+
+    </mat-form-field>
 
 
 </div>
