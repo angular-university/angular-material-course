@@ -38,6 +38,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
     declarations: [
@@ -63,6 +64,7 @@ import {MatSliderModule} from '@angular/material/slider';
         MatSidenavModule,
         MatListModule,
         MatToolbarModule,
+        MatTooltipModule,
         MatInputModule,
         MatTableModule,
         MatPaginatorModule,
