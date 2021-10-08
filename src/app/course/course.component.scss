@@ -35,16 +35,21 @@
 .lessons-table {
   min-height: 360px;
   margin-top: 10px;
-  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   tr:hover {
     background: whitesmoke;
     cursor: pointer;
   }
 }
 
+
 .spinner-container mat-spinner {
     margin: 130px auto 0 auto;
 }
+
+
 
 .mat-column-seqNo {
   width: 32px;
