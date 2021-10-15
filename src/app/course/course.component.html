@@ -4,6 +4,12 @@
 
   <img class="course-thumbnail" [src]="course?.iconUrl">
 
+  <div class="spinner-container" *ngIf="loading">
+
+      <mat-spinner></mat-spinner>
+
+  </div>
+
 </div>
 
 <table mat-table class="lessons-table mat-elevation-z8"
