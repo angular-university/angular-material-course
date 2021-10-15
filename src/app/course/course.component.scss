@@ -1,7 +1,7 @@
 
 .course {
     text-align: center;
-    max-width: 390px;
+    width: 390px;
     margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@
 .lessons-table {
   min-height: 360px;
   margin-top: 10px;
-  max-width: 400px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
   tr:hover {
@@ -44,12 +44,14 @@
   }
 }
 
+mat-paginator {
+  width: 400px;
+  margin-bottom: 200px;
+}
 
 .spinner-container mat-spinner {
     margin: 130px auto 0 auto;
 }
-
-
 
 .mat-column-seqNo {
   width: 32px;
