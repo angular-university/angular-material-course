@@ -54,7 +54,10 @@
 
         </tr>
 
-        <tr mat-row *matRowDef="let lesson;columns:['expandedDetail']"></tr>
+        <tr mat-row *matRowDef="let lesson;columns:['expandedDetail']"
+            [class.collapsed-detail]="lesson != expandedLesson">
+
+        </tr>
 
 
     </table>
