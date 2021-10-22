@@ -36,6 +36,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     displayedColumns = ['seqNo', "description", "duration"];
 
+    expandedLesson: Lesson = null;
+
     ngOnInit() {
 
         this.course = this.route.snapshot.data["course"];
@@ -68,6 +70,16 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
     }
 
+    onToggleLesson(lesson:Lesson) {
+        if (lesson == this.expandedLesson) {
+            this.expandedLesson = null;
+        }
+        else {
+            this.expandedLesson = lesson;
+        }
+
+    }
+
     ngAfterViewInit() {
 
         this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
@@ -82,6 +94,15 @@ export class CourseComponent implements OnInit, AfterViewInit {
     }
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
