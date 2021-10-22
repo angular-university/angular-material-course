@@ -39,7 +39,7 @@ export class CoursesService {
 
     findLessons(
         courseId:number, sortOrder = 'asc',
-        pageNumber = 0, pageSize = 3):  Observable<Lesson[]> {
+        pageNumber = 0, pageSize = 3, sortColumn = 'seqNo'):  Observable<Lesson[]> {
 
         return this.http.get('/api/lessons', {
             params: new HttpParams()
@@ -47,6 +47,7 @@ export class CoursesService {
                 .set('sortOrder', sortOrder)
                 .set('pageNumber', pageNumber.toString())
                 .set('pageSize', pageSize.toString())
+                .set('sortColumn', sortColumn)
         }).pipe(
             map(res =>  res["payload"])
         );
