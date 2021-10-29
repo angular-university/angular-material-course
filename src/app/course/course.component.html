@@ -14,6 +14,33 @@
            matSort matSortDisableClear matSortActive="seqNo" matSortDirection="asc"
            [dataSource]="lessons" multiTemplateDataRows>
 
+        <ng-container matColumnDef="select">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                <mat-checkbox [checked]="selection.hasValue() && isAllSelected()"
+                              [indeterminate]="selection.hasValue() && !isAllSelected()"
+
+                    (change)="toggleAll()">
+
+
+                </mat-checkbox>
+
+
+            </th>
+
+            <td  mat-cell *matCellDef="let lesson" (click)="$event.stopPropagation()">
+
+                <mat-checkbox (change)="onLessonToggled(lesson)"
+                    [checked]="selection.isSelected(lesson)">
+
+                </mat-checkbox>
+
+
+            </td>
+
+        </ng-container>
+
         <ng-container matColumnDef="seqNo">
 
             <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
@@ -40,7 +67,7 @@
 
         <ng-container matColumnDef="expandedDetail">
 
-            <td mat-cell *matCellDef="let lesson" colspan="3">
+            <td mat-cell *matCellDef="let lesson" colspan="4">
                 {{lesson.longDescription}}
             </td>
 
