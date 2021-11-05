@@ -1,6 +1,8 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Course} from "../model/course";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import {openEditCourseDialog} from '../course-dialog/course-dialog.component';
+import {filter} from 'rxjs/operators';
 
 @Component({
     selector: 'courses-card-list',
@@ -12,7 +14,7 @@ export class CoursesCardListComponent implements OnInit {
     @Input()
     courses: Course[];
 
-    constructor() {
+    constructor(private dialog: MatDialog) {
     }
 
     ngOnInit() {
@@ -20,6 +22,14 @@ export class CoursesCardListComponent implements OnInit {
     }
 
     editCourse(course:Course) {
+
+        openEditCourseDialog(this.dialog, course)
+            .pipe(
+                filter(val => !!val)
+            )
+            .subscribe(
+                val => console.log("new course value:", val)
+            );
 
 
     }
