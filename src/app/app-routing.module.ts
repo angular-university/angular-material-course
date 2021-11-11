@@ -5,6 +5,7 @@ import {AboutComponent} from "./about/about.component";
 import {CourseComponent} from "./course/course.component";
 import {CourseResolver} from "./services/course.resolver";
 import {CreateCourseComponent} from './create-course/create-course.component';
+import {DragDropComponent} from './drag-drop/drag-drop.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'add-new-course',
     component: CreateCourseComponent
+  },
+  {
+    path: "drag-drop-example",
+    component: DragDropComponent
   },
     {
         path: "**",

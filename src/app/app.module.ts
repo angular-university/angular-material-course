@@ -39,6 +39,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {DragDropComponent} from './drag-drop/drag-drop.component';
+
 
 @NgModule({
     declarations: [
@@ -50,7 +53,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
         CourseDialogComponent,
         CreateCourseComponent,
         CreateCourseStep1Component,
-        CreateCourseStep2Component
+        CreateCourseStep2Component,
+        DragDropComponent
     ],
     imports: [
         BrowserModule,
@@ -75,6 +79,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
         AppRoutingModule,
         MatSelectModule,
         MatCheckboxModule,
+        DragDropModule,
         MatRadioModule,
         MatSliderModule,
         MatDatepickerModule,
