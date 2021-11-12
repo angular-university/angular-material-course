@@ -5,10 +5,10 @@
 
     <h3>Lessons To Watch:</h3>
 
-    <div cdkDropList class="lessons-list"
+    <div cdkDropList class="lessons-list drag-drop-list"
         (cdkDropListDropped)="drop($event)">
 
-        <div class="lesson" *ngFor="let lesson of lessons" cdkDrag>
+        <div class="lesson drag-drop-item" *ngFor="let lesson of lessons" cdkDrag>
 
             <div class="drop-placeholder" *cdkDragPlaceholder></div>
 
