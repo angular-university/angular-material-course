@@ -29,3 +29,25 @@
   }
 
 }
+
+@mixin responsive-dialogs {
+
+  @media screen and (max-width: 959px) {
+
+    .modal-panel {
+      min-width: 0 !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: 100% !important;
+      height: 100% !important;
+
+      .mat-dialog-container {
+        border-radius: 0;
+        padding: 14px !important;
+      }
+
+    }
+
+  }
+
+}
