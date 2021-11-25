@@ -42,6 +42,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {DragDropComponent} from './drag-drop/drag-drop.component';
 
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
     declarations: [
@@ -84,7 +85,8 @@ import {DragDropComponent} from './drag-drop/drag-drop.component';
         MatSliderModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatGridListModule
     ],
     providers: [
         CoursesService,
