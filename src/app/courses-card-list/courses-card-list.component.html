@@ -1,38 +1,50 @@
 
 
-<mat-card class="course-card mat-elevation-z7" *ngFor="let course of courses">
+<mat-grid-list [cols]="2" [rowHeight]="'500px'">
 
-    <mat-card-header>
+    <mat-grid-tile *ngFor="let course of courses">
 
-        <mat-card-title>{{course.description}}</mat-card-title>
+        <mat-card class="course-card mat-elevation-z7">
 
-    </mat-card-header>
+            <mat-card-header>
 
+                <mat-card-title>{{course.description}}</mat-card-title>
 
-    <img mat-card-image [src]="course.iconUrl">
-
-
-
-    <mat-card-content>
-
-        <p>{{course.longDescription}}</p>
-
-    </mat-card-content>
+            </mat-card-header>
 
 
-    <mat-card-actions class="course-actions">
-
-        <button mat-raised-button color="primary"
-            [routerLink]="['courses', course.id]">
-            VIEW COURSE
-        </button>
-
-        <button mat-raised-button color="accent" (click)="editCourse(course)">
-            EDIT COURSE
-        </button>
-
-    </mat-card-actions>
+            <img mat-card-image [src]="course.iconUrl">
 
 
 
-</mat-card>
+            <mat-card-content>
+
+                <p>{{course.longDescription}}</p>
+
+            </mat-card-content>
+
+
+            <mat-card-actions class="course-actions">
+
+                <button mat-raised-button color="primary"
+                        [routerLink]="['courses', course.id]">
+                    VIEW COURSE
+                </button>
+
+                <button mat-raised-button color="accent" (click)="editCourse(course)">
+                    EDIT COURSE
+                </button>
+
+            </mat-card-actions>
+
+
+
+        </mat-card>
+
+    </mat-grid-tile>
+
+
+</mat-grid-list>
+
+
+
