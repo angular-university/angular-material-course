@@ -20,3 +20,18 @@
   max-width: 442px;
 }
 
+.handset-portrait .course-card {
+    width: 100%;
+    margin: 0;
+    padding: 16px 0;
+}
+
+.handset-portrait .course-thumbnail {
+    width: 100%;
+    margin: 0;
+}
+
+.handset-portrait .long-description {
+    padding:  10px 10px 0 10px;
+}
+

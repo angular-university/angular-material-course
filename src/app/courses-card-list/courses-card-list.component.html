@@ -1,6 +1,7 @@
 
 
-<mat-grid-list [cols]="2" [rowHeight]="'500px'">
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight"
+               [ngClass]="{'handset-portrait': handsetPortrait}">
 
     <mat-grid-tile *ngFor="let course of courses">
 
