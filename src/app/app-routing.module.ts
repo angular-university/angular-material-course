@@ -6,6 +6,7 @@ import {CourseComponent} from "./course/course.component";
 import {CourseResolver} from "./services/course.resolver";
 import {CreateCourseComponent} from './create-course/create-course.component';
 import {DragDropComponent} from './drag-drop/drag-drop.component';
+import {TreeDemoComponent} from './tree-demo/tree-demo.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "drag-drop-example",
     component: DragDropComponent
+  },
+  {
+    path: "tree-demo",
+    component: TreeDemoComponent
   },
     {
         path: "**",

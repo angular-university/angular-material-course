@@ -43,6 +43,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {DragDropComponent} from './drag-drop/drag-drop.component';
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import {TreeDemoComponent} from './tree-demo/tree-demo.component';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
     declarations: [
@@ -55,7 +57,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
         CreateCourseComponent,
         CreateCourseStep1Component,
         CreateCourseStep2Component,
-        DragDropComponent
+        DragDropComponent,
+        TreeDemoComponent
     ],
     imports: [
         BrowserModule,
@@ -86,7 +89,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
         MatDatepickerModule,
         MatNativeDateModule,
         ReactiveFormsModule,
-        MatGridListModule
+        MatGridListModule,
+        MatTreeModule
     ],
     providers: [
         CoursesService,
