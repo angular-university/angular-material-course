@@ -15,7 +15,7 @@ export class CoursesCardListComponent implements OnInit {
     @Input()
     courses: Course[];
 
-    cols = 3;
+    cols = 1;
 
     rowHeight = '500px';
 
@@ -27,7 +27,7 @@ export class CoursesCardListComponent implements OnInit {
     }
 
     ngOnInit() {
-
+/*
         this.responsive.observe([
             Breakpoints.TabletPortrait,
             Breakpoints.TabletLandscape,
@@ -58,6 +58,8 @@ export class CoursesCardListComponent implements OnInit {
                 }
 
             });
+            */
+
 
     }
 
