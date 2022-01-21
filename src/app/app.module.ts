@@ -45,6 +45,7 @@ import {DragDropComponent} from './drag-drop/drag-drop.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {TreeDemoComponent} from './tree-demo/tree-demo.component';
 import {MatTreeModule} from '@angular/material/tree';
+import {VirtualScrollingComponent} from './virtual-scrolling/virtual-scrolling.component';
 
 @NgModule({
     declarations: [
@@ -58,7 +59,8 @@ import {MatTreeModule} from '@angular/material/tree';
         CreateCourseStep1Component,
         CreateCourseStep2Component,
         DragDropComponent,
-        TreeDemoComponent
+        TreeDemoComponent,
+        VirtualScrollingComponent
     ],
     imports: [
         BrowserModule,
