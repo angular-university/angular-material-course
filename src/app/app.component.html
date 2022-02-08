@@ -1,7 +1,9 @@
+
 <mat-sidenav-container fullscreen>
 
-    <mat-sidenav #start>
-        <mat-nav-list>
+    <mat-sidenav #sidenav>
+
+        <mat-nav-list (click)="sidenav.close()">
 
             <a mat-list-item routerLink="/">
                 <mat-icon>library_books</mat-icon>
@@ -12,6 +14,22 @@
                 <mat-icon>question_answer</mat-icon>
                 <span>About</span>
             </a>
+
+            <a mat-list-item routerLink="drag-drop-example">
+                <mat-icon>drag_indicator</mat-icon>
+                <span>Drag and Drop</span>
+            </a>
+
+            <a mat-list-item routerLink="tree-demo">
+                <mat-icon>park</mat-icon>
+                <span>Tree Demo</span>
+            </a>
+
+            <a mat-list-item routerLink="virtual-scrolling">
+                <mat-icon>import_export</mat-icon>
+                <span>Virtual Scrolling</span>
+            </a>
+
             <a mat-list-item>
                 <mat-icon>person_add</mat-icon>
                 <span>Register</span>
@@ -24,14 +42,43 @@
 
         </mat-nav-list>
 
+
     </mat-sidenav>
 
+
     <mat-toolbar color="primary">
-        <button mat-icon-button (click)="start.open('mouse')">
+
+        <button mat-icon-button (click)="sidenav.open()">
             <mat-icon>menu</mat-icon>
         </button>
+
+        <a mat-button [matMenuTriggerFor]="dropdown">
+            Screens
+        </a>
+
+        <mat-menu #dropdown>
+
+            <button mat-menu-item routerLink="/">Courses</button>
+
+            <button mat-menu-item routerLink="/about">About</button>
+
+        </mat-menu>
+
+
+        <a mat-button>
+            <mat-icon>person_add</mat-icon>
+            Register
+        </a>
+
+        <a mat-button>
+            <mat-icon>account_circle</mat-icon>
+            Login
+        </a>
+
     </mat-toolbar>
 
+
     <router-outlet></router-outlet>
+
 
 </mat-sidenav-container>

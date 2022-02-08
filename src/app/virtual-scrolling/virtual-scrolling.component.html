@@ -1,0 +1,32 @@
+
+<div class="container">
+
+  <div class="virtual-scrolling">
+
+    <h3>Virtual Scrolling Demo</h3>
+
+    <mat-list class="mat-elevation-z7">
+
+        <cdk-virtual-scroll-viewport itemSize="48" class="scrolling-container">
+
+            <mat-list-item *cdkVirtualFor="let item of items; let index = index;
+                    let count = count;
+                    let first = first;
+                    let last = last;
+                    let even = even;
+                    let odd = odd;">
+
+                {{item}}
+
+            </mat-list-item>
+
+
+        </cdk-virtual-scroll-viewport>
+
+
+    </mat-list>
+
+  </div>
+
+</div>
+

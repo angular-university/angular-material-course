@@ -7,7 +7,7 @@ import {COURSES} from "./db-data";
 
 export function getAllCourses(req: Request, res: Response) {
 
-    res.status(200).json({payload:Object.values(COURSES)});
+  res.status(200).json({payload:Object.values(COURSES).sort((c1:any, c2:any) => c1.seqNo - c2.seqNo)});
 
 }
 

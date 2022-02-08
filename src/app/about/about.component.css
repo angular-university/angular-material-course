@@ -1,4 +1,13 @@
 
+.about-container {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
 .course-image {
-    max-width: 200px;
+  max-width: 200px;
+}
+
+:host {
+  font-family: Roboto;
 }

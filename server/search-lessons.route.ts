@@ -15,9 +15,22 @@ export function searchLessons(req: Request, res: Response) {
           filter = queryParams.filter || '',
           sortOrder = queryParams.sortOrder,
           pageNumber = parseInt(queryParams.pageNumber) || 0,
-          pageSize = parseInt(queryParams.pageSize);
+          pageSize = parseInt(queryParams.pageSize),
+          sortColumn = queryParams.sortColumn ?? "seqNo";
 
-    let lessons = Object.values(LESSONS).filter(lesson => lesson.courseId == courseId).sort((l1, l2) => l1.id - l2.id);
+    let lessons = Object.values(LESSONS)
+        .filter(lesson => lesson.courseId == courseId)
+        .sort((l1, l2) => {
+            if (l1[sortColumn] > l2[sortColumn]) {
+                return 1;
+            }
+            else if (l1[sortColumn] < l2[sortColumn]) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        });
 
     if (filter) {
        lessons = lessons.filter(lesson => lesson.description.trim().toLowerCase().search(filter.toLowerCase()) >= 0);

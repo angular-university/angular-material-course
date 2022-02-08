@@ -30,6 +30,23 @@ import {CourseResolver} from "./services/course.resolver";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {CreateCourseComponent} from './create-course/create-course.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {CreateCourseStep1Component} from './create-course/create-course-step-1/create-course-step-1.component';
+import {CreateCourseStep2Component} from './create-course/create-course-step-2/create-course-step-2.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {DragDropComponent} from './drag-drop/drag-drop.component';
+
+import {MatGridListModule} from '@angular/material/grid-list';
+import {TreeDemoComponent} from './tree-demo/tree-demo.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {VirtualScrollingComponent} from './virtual-scrolling/virtual-scrolling.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
     declarations: [
@@ -38,7 +55,13 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
         AboutComponent,
         CourseComponent,
         CoursesCardListComponent,
-        CourseDialogComponent
+        CourseDialogComponent,
+        CreateCourseComponent,
+        CreateCourseStep1Component,
+        CreateCourseStep2Component,
+        DragDropComponent,
+        TreeDemoComponent,
+        VirtualScrollingComponent
     ],
     imports: [
         BrowserModule,
@@ -52,24 +75,32 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
         MatSidenavModule,
         MatListModule,
         MatToolbarModule,
+        MatTooltipModule,
         MatInputModule,
         MatTableModule,
         MatPaginatorModule,
         MatSortModule,
         MatProgressSpinnerModule,
+        MatStepperModule,
         MatDialogModule,
         AppRoutingModule,
         MatSelectModule,
+        MatCheckboxModule,
+        DragDropModule,
+        MatRadioModule,
+        MatSliderModule,
         MatDatepickerModule,
-        MatMomentDateModule,
-        ReactiveFormsModule
+        MatNativeDateModule,
+        ReactiveFormsModule,
+        MatGridListModule,
+        MatTreeModule,
+        ScrollingModule
     ],
     providers: [
         CoursesService,
         CourseResolver
     ],
-    bootstrap: [AppComponent],
-    entryComponents: [CourseDialogComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

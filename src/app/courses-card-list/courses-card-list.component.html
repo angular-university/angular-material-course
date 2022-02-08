@@ -1,30 +1,51 @@
 
 
-<mat-card *ngFor="let course of courses" class="course-card mat-elevation-z10">
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight"
+               [ngClass]="{'handset-portrait': handsetPortrait}">
 
-    <mat-card-header>
+    <mat-grid-tile *ngFor="let course of courses">
 
-        <mat-card-title>{{course.description}}</mat-card-title>
+        <mat-card class="course-card mat-elevation-z7">
 
-    </mat-card-header>
+            <mat-card-header>
 
-    <img mat-card-image [src]="course.iconUrl">
+                <mat-card-title>{{course.description}}</mat-card-title>
 
-    <mat-card-content>
-        <p>{{course.longDescription}}</p>
-    </mat-card-content>
+            </mat-card-header>
 
-    <mat-card-actions class="course-actions">
 
-        <button mat-button class="mat-raised-button mat-primary" [routerLink]="['/courses', course.id]">
-            VIEW COURSE
-        </button>
+            <img mat-card-image [src]="course.iconUrl">
 
-        <button mat-button class="mat-raised-button mat-accent"
-                (click)="editCourse(course)">
-            EDIT
-        </button>
 
-    </mat-card-actions>
 
-</mat-card>
+            <mat-card-content>
+
+                <p>{{course.longDescription}}</p>
+
+            </mat-card-content>
+
+
+            <mat-card-actions class="course-actions">
+
+                <button mat-raised-button color="primary"
+                        [routerLink]="['courses', course.id]">
+                    VIEW COURSE
+                </button>
+
+                <button mat-raised-button color="accent" (click)="editCourse(course)">
+                    EDIT COURSE
+                </button>
+
+            </mat-card-actions>
+
+
+
+        </mat-card>
+
+    </mat-grid-tile>
+
+
+</mat-grid-list>
+
+
+

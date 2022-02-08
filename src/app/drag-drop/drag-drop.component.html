@@ -1,0 +1,46 @@
+
+<div class="drag-drop-container" cdkDropListGroup>
+
+  <div class="pending">
+
+    <h3>Lessons To Watch:</h3>
+
+    <div cdkDropList class="lessons-list drag-drop-list"
+         [cdkDropListData]="lessons"
+        (cdkDropListDropped)="dropMultiList($event)">
+
+        <div class="lesson drag-drop-item" *ngFor="let lesson of lessons" cdkDrag>
+
+            <div class="drop-placeholder" *cdkDragPlaceholder></div>
+
+            {{lesson.description}}
+
+        </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="done">
+
+    <h3>Done:</h3>
+
+      <div cdkDropList class="lessons-list drag-drop-list"
+           [cdkDropListData]="done"
+           (cdkDropListDropped)="dropMultiList($event)">
+
+          <div class="lesson drag-drop-item" *ngFor="let lesson of done" cdkDrag>
+
+              <div class="drop-placeholder" *cdkDragPlaceholder></div>
+
+              {{lesson.description}}
+
+          </div>
+
+      </div>
+
+
+  </div>
+
+</div>
