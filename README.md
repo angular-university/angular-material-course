@@ -1,7 +1,7 @@
 
 ## Angular Material Course
 
-This repository contains the code of the [Angular Material In Depth] video course (https://angular-university.io/course/angular-material-course).
+This repository contains the code of the [Angular Material In Depth](https://angular-university.io/course/angular-material-course) video course.
 
 This course repository is updated to Angular 13:
 
