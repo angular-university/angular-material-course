@@ -8,6 +8,9 @@ import {searchLessons} from "./search-lessons.route";
 
 const app: Application = express();
 
+const cors = require('cors');
+
+app.use(cors({origin: true}));
 
 app.route('/api/courses').get(getAllCourses);
 

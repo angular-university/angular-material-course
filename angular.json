@@ -106,7 +106,6 @@
       }
     }
   },
-  "defaultProject": "angular-material-course",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"

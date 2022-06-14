@@ -9,7 +9,7 @@ import {setTimeout} from "timers";
 
 export function searchLessons(req: Request, res: Response) {
 
-    const queryParams = req.query;
+    const queryParams = req.query as any;
 
     const courseId = queryParams.courseId,
           filter = queryParams.filter || '',
