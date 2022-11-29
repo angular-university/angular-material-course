@@ -1,8 +1,8 @@
 
 .course {
-  text-align: center;
-  width: 390px;
-  margin: 0 auto;
+    text-align: center;
+    width: 390px;
+    margin: 40px auto;
 }
 
 .course-thumbnail {
@@ -46,7 +46,8 @@
 
 mat-paginator {
   width: 400px;
-  margin-bottom: 200px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
 }
 
 .spinner-container mat-spinner {

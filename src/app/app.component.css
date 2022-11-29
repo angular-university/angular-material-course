@@ -6,3 +6,8 @@
 main {
     margin: 30px;
 }
+
+mat-toolbar a {
+  color: white;
+}
+

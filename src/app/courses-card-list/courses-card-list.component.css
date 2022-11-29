@@ -6,7 +6,12 @@
 }
 
 .course-actions {
-    text-align: center;
+    display: flex;
+  justify-content: center;
+}
+
+.course-actions button {
+  margin-right: 5px;
 }
 
 .course-thumbnail {
@@ -18,5 +23,9 @@
 .long-description {
   min-height: 50px;
   max-width: 442px;
+}
+
+mat-card-content p {
+  padding: 10px;
 }
 
