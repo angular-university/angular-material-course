@@ -6,7 +6,12 @@
 }
 
 .course-actions {
-    text-align: center;
+    display: flex;
+  justify-content: center;
+}
+
+.course-actions button {
+  margin-right: 5px;
 }
 
 .course-thumbnail {
@@ -19,6 +24,11 @@
   min-height: 50px;
   max-width: 442px;
 }
+
+mat-card-content p{
+  padding: 10px;
+}
+
 
 .handset-portrait .course-card {
     width: 100%;
@@ -34,4 +44,5 @@
 .handset-portrait .long-description {
     padding:  10px 10px 0 10px;
 }
+
 

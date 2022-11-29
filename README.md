@@ -3,7 +3,7 @@
 
 This repository contains the code of the [Angular Material In Depth](https://angular-university.io/course/angular-material-course) video course.
 
-This course repository is updated to Angular 14:
+This course repository is updated to Angular 15:
 
 ![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
 
@@ -13,7 +13,7 @@ This master branch contains the *final version of the course code*, that you can
 
 # Installation pre-requisites
 
-IMPORTANT: Please use Node 16 LST (Long Term Support version).
+IMPORTANT: Please use Node 18 LST (Long Term Support version).
 
 # Installing the Angular CLI
 

@@ -3,8 +3,9 @@
   min-width: 300px;
 }
 
-.mat-form-field {
-    display: block;
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
 }
 
 textarea {
