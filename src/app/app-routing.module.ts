@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {CourseComponent} from "./course/course.component";
-import {CourseResolver} from "./services/course.resolver";
+import {courseResolver} from "./services/course.resolver";
 import {CreateCourseComponent} from './create-course/create-course.component';
 import {DragDropComponent} from './drag-drop/drag-drop.component';
 import {TreeDemoComponent} from './tree-demo/tree-demo.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
         path: 'courses/:id',
         component: CourseComponent,
         resolve: {
-            course: CourseResolver
+            course: courseResolver
         }
     },
   {

@@ -26,7 +26,6 @@ import {  MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {CoursesService} from "./services/courses.service";
 import {HttpClientModule} from "@angular/common/http";
-import {CourseResolver} from "./services/course.resolver";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import {CreateCourseComponent} from './create-course/create-course.component';
@@ -96,8 +95,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         ScrollingModule
     ],
     providers: [
-        CoursesService,
-        CourseResolver
+        CoursesService
     ],
     bootstrap: [AppComponent]
 })
