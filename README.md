@@ -1,9 +1,9 @@
 
-## Angular Material In Depth
+## Angular Material Course
 
 This repository contains the code of the [Angular Material In Depth](https://angular-university.io/course/angular-material-course) video course.
 
-This course repository is updated to Angular 16:
+This course repository is updated to Angular 17:
 
 ![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
 
@@ -25,7 +25,7 @@ With the following command the angular-cli will be installed globally in your ma
 
 We can install the master branch using the following commands:
 
-    git clone https://github.com/angular-university/firebase-course.git
+    git clone https://github.com/angular-university/angular-material-course.git
 
     cd angular-material-course
     npm ci

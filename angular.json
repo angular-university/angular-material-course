@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-material-course:build"
+            "buildTarget": "angular-material-course:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-material-course:build:production"
+              "buildTarget": "angular-material-course:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-material-course:build"
+            "buildTarget": "angular-material-course:build"
           }
         },
         "test": {
