@@ -95,7 +95,7 @@ export class DragDropComponent {
     dropMultiList(event: CdkDragDrop<Lesson[]>) {
 
         if (event.previousContainer == event.container) {
-            moveItemInArray(this.lessons, event.previousIndex, event.currentIndex);
+            moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
         }
         else {
             transferArrayItem(
