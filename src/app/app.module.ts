@@ -25,7 +25,7 @@ import { MatSortModule } from "@angular/material/sort";
 import {  MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {CoursesService} from "./services/courses.service";
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import {CreateCourseComponent} from './create-course/create-course.component';
@@ -46,8 +46,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {VirtualScrollingComponent} from './virtual-scrolling/virtual-scrolling.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -61,10 +60,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         TreeDemoComponent,
         VirtualScrollingComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
-        HttpClientModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
@@ -92,12 +89,9 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         ReactiveFormsModule,
         MatGridListModule,
         MatTreeModule,
-        ScrollingModule
-    ],
-    providers: [
-        CoursesService
-    ],
-    bootstrap: [AppComponent]
-})
+        ScrollingModule], providers: [
+        CoursesService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {
 }
