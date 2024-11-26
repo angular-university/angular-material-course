@@ -59,9 +59,10 @@ const TREE_DATA: CourseNode[] = [
 ];
 
 @Component({
-  selector: 'tree-demo',
-  templateUrl: 'tree-demo.component.html',
-  styleUrls: ['tree-demo.component.scss']
+    selector: 'tree-demo',
+    templateUrl: 'tree-demo.component.html',
+    styleUrls: ['tree-demo.component.scss'],
+    standalone: false
 })
 export class TreeDemoComponent implements OnInit {
 

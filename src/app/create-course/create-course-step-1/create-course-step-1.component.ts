@@ -6,9 +6,10 @@ const SAMPLE_TEXT= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pro
 
 
 @Component({
-  selector: "create-course-step-1",
-  templateUrl:"create-course-step-1.component.html",
-  styleUrls: ["create-course-step-1.component.scss"]
+    selector: "create-course-step-1",
+    templateUrl: "create-course-step-1.component.html",
+    styleUrls: ["create-course-step-1.component.scss"],
+    standalone: false
 })
 export class CreateCourseStep1Component {
 
