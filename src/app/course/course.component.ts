@@ -12,7 +12,8 @@ import {merge, fromEvent} from "rxjs";
 @Component({
     selector: 'course',
     templateUrl: './course.component.html',
-    styleUrls: ['./course.component.scss']
+    styleUrls: ['./course.component.scss'],
+    standalone: false
 })
 export class CourseComponent implements OnInit, AfterViewInit {
 

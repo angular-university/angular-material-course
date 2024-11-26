@@ -4,9 +4,10 @@ import {Lesson} from '../model/lesson';
 
 
 @Component({
-  selector: 'drag-drop-example',
-  templateUrl: "drag-drop.component.html",
-  styleUrls: ["drag-drop.component.scss"]
+    selector: 'drag-drop-example',
+    templateUrl: "drag-drop.component.html",
+    styleUrls: ["drag-drop.component.scss"],
+    standalone: false
 })
 export class DragDropComponent {
 

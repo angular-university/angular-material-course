@@ -3,7 +3,7 @@
 
 This repository contains the code of the [Angular Material In Depth](https://angular-university.io/course/angular-material-course) video course.
 
-This course repository is updated to Angular 18:
+This course repository is updated to Angular 19:
 
 ![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
 
