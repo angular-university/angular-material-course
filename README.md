@@ -13,7 +13,7 @@ This master branch contains the *final version of the course code*, that you can
 
 # Installation pre-requisites
 
-IMPORTANT: Please use Node 22.16.0 LTS (Long Term Support version).
+IMPORTANT: Please use Node 22 LTS (Long Term Support version).
 
 # Installing the Angular CLI
 
