@@ -6,16 +6,15 @@
     <h3>Lessons To Watch:</h3>
 
     <div cdkDropList class="lessons-list drag-drop-list"
-         [cdkDropListData]="lessons"
-        (cdkDropListDropped)="dropMultiList($event)">
+      [cdkDropListData]="lessons"
+      (cdkDropListDropped)="dropMultiList($event)">
 
-        <div class="lesson drag-drop-item" *ngFor="let lesson of lessons" cdkDrag>
-
-            <div class="drop-placeholder" *cdkDragPlaceholder></div>
-
-            {{lesson.description}}
-
+      @for (lesson of lessons; track lesson) {
+        <div class="lesson drag-drop-item" cdkDrag>
+          <div class="drop-placeholder" *cdkDragPlaceholder></div>
+          {{lesson.description}}
         </div>
+      }
 
 
     </div>
@@ -26,19 +25,18 @@
 
     <h3>Done:</h3>
 
-      <div cdkDropList class="lessons-list drag-drop-list"
-           [cdkDropListData]="done"
-           (cdkDropListDropped)="dropMultiList($event)">
+    <div cdkDropList class="lessons-list drag-drop-list"
+      [cdkDropListData]="done"
+      (cdkDropListDropped)="dropMultiList($event)">
 
-          <div class="lesson drag-drop-item" *ngFor="let lesson of done" cdkDrag>
+      @for (lesson of done; track lesson) {
+        <div class="lesson drag-drop-item" cdkDrag>
+          <div class="drop-placeholder" *cdkDragPlaceholder></div>
+          {{lesson.description}}
+        </div>
+      }
 
-              <div class="drop-placeholder" *cdkDragPlaceholder></div>
-
-              {{lesson.description}}
-
-          </div>
-
-      </div>
+    </div>
 
 
   </div>
