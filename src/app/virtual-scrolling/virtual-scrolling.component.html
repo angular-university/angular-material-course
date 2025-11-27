@@ -6,7 +6,9 @@
     <h3>Virtual Scrolling Demo</h3>
 
     <mat-list class="scrolling-container mat-elevation-z7">
-      <mat-list-item *ngFor="let item of items"> {{item}} </mat-list-item>
+      @for (item of items; track item) {
+        <mat-list-item> {{item}} </mat-list-item>
+      }
     </mat-list>
 
   </div>
