@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {  MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
@@ -14,6 +14,7 @@ import {SelectionModel} from '@angular/cdk/collections';
     selector: 'course',
     templateUrl: './course.component.html',
     styleUrls: ['./course.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CourseComponent implements OnInit, AfterViewInit {

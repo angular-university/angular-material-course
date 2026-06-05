@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 import {Course} from '../model/course';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {openEditCourseDialog} from '../course-dialog/course-dialog.component';
@@ -9,6 +9,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
     selector: 'courses-card-list',
     templateUrl: './courses-card-list.component.html',
     styleUrls: ['./courses-card-list.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CoursesCardListComponent implements OnInit {
