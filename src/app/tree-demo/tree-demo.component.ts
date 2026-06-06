@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource} from '@angular/material/tree';
 import {FlatTreeControl, NestedTreeControl} from '@angular/cdk/tree';
 
@@ -55,6 +55,7 @@ const TREE_DATA: CourseNode[] = [
     selector: 'tree-demo',
     templateUrl: 'tree-demo.component.html',
     styleUrls: ['tree-demo.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TreeDemoComponent implements OnInit {
