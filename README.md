@@ -56,209 +56,235 @@ Note: **make sure to use command npm start and not ng serve, as npm start adds a
 
 Here is a list of all the courses of the Angular University.
 
-## Angular For Beginners (Signals Edition)
+## Latest Angular Courses
 
-[Angular For Beginners (Signals Edition)](https://angular-university.io/course/angular-for-beginners-course) — Learn Angular from scratch the modern way: components, inputs and outputs, template control flow, signals, and fetching data from a backend.
+Fully up to date with the latest version of Angular: Signals, Zoneless and all the modern APIs. If you are just getting started, take these in the order they are listed - that is the optimal learning order.
+
+### Angular For Beginners (Signals Edition)
+
+[Angular For Beginners (Signals Edition)](https://angular-university.io/course/angular-for-beginners-course) — A complete beginner-friendly course to learn Angular from the ground up with Signals, mastering the core features you’ll use every day.
 
 <img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-for-beginners.jpg" width="400" alt="Angular For Beginners (Signals Edition)">
 
-## Angular Forms In Depth (Signals Edition)
+### Angular In Depth (Signals Edition) — Flagship Course
 
-[Angular Forms In Depth - Signals Edition](https://angular-university.io/course/angular-signal-forms-course) — Build complex enterprise data forms with Angular Signal Forms.
+[Angular In Depth (Signals Edition)](https://angular-university.io/course/angular-in-depth-signals-course) — Our flagship course. The definitive guide to modern signal-based Angular. From fundamentals to advanced.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-forms-in-depth.jpg" width="400" alt="Angular Forms In Depth - Signals Edition">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-in-depth-with-signals.jpg" width="400" alt="Angular In Depth (Signals Edition)">
 
-## Angular AI In Depth (with Cursor and Claude Code)
+### Angular Router In Depth (Signals Edition)
 
-[Angular AI In Depth](https://angular-university.io/course/angular-ai-in-depth-course) — Build modern full-stack Angular applications with signals, standalone components, zoneless architecture, and OpenAI integration using Claude Code.
+[Angular Router In Depth (Signals Edition)](https://angular-university.io/course/angular-router-course) — A modern deep dive into Angular routing, from core concepts to advanced navigation patterns.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-ai-in-depth.jpg" width="400" alt="Angular AI In Depth">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-router-in-depth.jpg" width="400" alt="Angular Router In Depth (Signals Edition)">
 
-## Angular Testing In Depth (Signals Edition)
+### Angular Forms In Depth (Signals Edition)
 
-[Angular Testing In Depth](https://angular-university.io/course/angular-testing-in-depth) — Write robust, maintainable tests for modern signal-based Angular applications.
+[Angular Forms In Depth (Signals Edition)](https://angular-university.io/course/angular-signal-forms-course) — An in-depth guide to Angular Signal Forms, covering validation, custom controls, and real-world patterns.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-testing-In-depth.jpg" width="400" alt="Angular Testing In Depth">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-forms-in-depth.jpg" width="400" alt="Angular Forms In Depth (Signals Edition)">
 
-## Angular Core Deep Dive
+### Angular AI In Depth (With Claude Code)
 
-[Angular Core Deep Dive](https://angular-university.io/course/angular-course) — A detailed walk-through of the most important part of Angular - the Core and Common modules.
+[Angular AI In Depth (With Claude Code)](https://angular-university.io/course/angular-ai-in-depth-course) — Vibe code from scratch an Angular OpenAI chatbot using Claude Code.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-core-deep-dive-new-2.jpg" width="400" alt="Angular Core Deep Dive">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-ai-in-depth.jpg" width="400" alt="Angular AI In Depth (With Claude Code)">
 
-## Modern Angular With Signals
+### Angular Testing In Depth (Signals Edition)
 
-[Modern Angular With Signals](https://angular-university.io/course/angular-signals-course) — Learn signals in depth. Build a modern signal-based application with async/await, standalone components and optional RxJs.
+[Angular Testing In Depth (Signals Edition)](https://angular-university.io/course/angular-testing-in-depth) — Learn Angular testing in depth. Write robust, maintainable tests for modern signal-based Angular applications.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-signals-course.jpg" width="400" alt="Modern Angular With Signals">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-testing-In-depth.jpg" width="400" alt="Angular Testing In Depth (Signals Edition)">
 
-## Typescript: The Ultimate Bootcamp
+## Typescript
+
+Learn the language itself, in depth. Typescript moves independently of Angular, so these courses do not go out of date with an Angular release.
+
+### Typescript: The Ultimate Bootcamp
 
 [Typescript: The Ultimate Bootcamp](https://angular-university.io/course/typescript-bootcamp) — Learn in-depth all the language fundamentals. Practice by building practical projects in Node, React and Angular.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/typescript-bootcamp-2.jpg" width="400" alt="Typescript: The Ultimate Bootcamp">
 
-## RxJs In Practice
+## RxJs and NgRx
 
-[RxJs In Practice](https://angular-university.io/course/rxjs-course) — Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples.
+Learn RxJs and its operators in depth, how to build Angular applications in reactive style, and state management with NgRx. The operators and patterns here have not been replaced, so these courses stay current independently of the Angular version you are on.
 
-<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png" width="400" alt="RxJs In Practice">
+### RxJs In Practice Course
 
-## Reactive Angular Course
+[RxJs In Practice Course](https://angular-university.io/course/rxjs-course) — Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples.
+
+<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png" width="400" alt="RxJs In Practice Course">
+
+### Reactive Angular Course
 
 [Reactive Angular Course](https://angular-university.io/course/reactive-angular-course) — How to build Angular applications in Reactive style using plain RxJs - patterns, anti-patterns, lightweight state management.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/reactive-angular-course.jpg" width="400" alt="Reactive Angular Course">
 
-## NgRx (with NgRx Data) - The Complete Guide
+### NgRx (with NgRx Data) - The Complete Guide
 
 [NgRx (with NgRx Data) - The Complete Guide](https://angular-university.io/course/ngrx-course) — Learn the modern NgRx Ecosystem, including NgRx Data, Store, Effects, Router Store, NgRx Entity, and DevTools.
 
-<img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/ngrx-v2.png" width="400" alt="NgRx Complete Guide">
+<img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/ngrx-v2.png" width="400" alt="NgRx (with NgRx Data) - The Complete Guide">
 
-## Angular SSR In Depth
+## Still Relevant Courses
+
+Courses built on an older version of Angular that still hold up. The patterns they teach have not been replaced, so the content is still worth your time - you will just meet an older syntax here and there.
+
+### Modern Angular With Signals
+
+[Modern Angular With Signals](https://angular-university.io/course/angular-signals-course) — Learn signals in depth. Build a modern signal-based application with async/await, standalone components and optional RxJs.
+
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-signals-course.jpg" width="400" alt="Modern Angular With Signals">
+
+### Angular SSR In Depth
 
 [Angular SSR In Depth](https://angular-university.io/course/angular-universal-course) — Use Angular on the server too! Learn Angular Server-Side Rendering.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-universal-course.jpg" width="400" alt="Angular SSR In Depth">
 
-## Angular Progressive Web Apps (PWA) Course
+## Extra Tutorials
 
-[Angular PWA Course](https://angular-university.io/course/angular-pwa-course) — Learn Angular Progressive Web Applications, build the future of the Web Today.
+Extra tutorials covering developer preview features or isolated topics that don't fit into any course.
 
-<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png" width="400" alt="Angular PWA Course">
-
-## Angular University Extra Tutorials
+### Angular University Extra Tutorials
 
 [Angular University Extra Tutorials](https://angular-university.io/course/angular-extra-tutorials) — Extra tutorials covering developer preview features or isolated topics.
 
 <img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-tutorials.jpg" width="400" alt="Angular University Extra Tutorials">
 
-# Archived Courses
+## Archived Courses
 
-These courses are archived and replaced with newer versions, but are still accessible to subscribers.
+These courses have been archived and replaced by newer ones. They remain available to subscribers who purchased them, and to anyone looking for training on an older version.
 
-## Angular Router In Depth (Archived)
+### Angular Core Deep Dive (Archived)
 
-[Angular Router In Depth](https://angular-university.io/course/angular-router-course) — Build large-scale Single Page Applications with the powerful Angular Router.
+[Angular Core Deep Dive](https://angular-university.io/course/angular-course) — A detailed walk-through of the most important part of Angular - the Core and Common modules.
 
-<img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-router-course.jpg" width="400" alt="Angular Router In Depth">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-core-deep-dive-new-2.jpg" width="400" alt="Angular Core Deep Dive">
 
-## Angular Security Course - Web Security Fundamentals (Archived)
+### Angular Progressive Web Apps (PWA) Course (Archived)
 
-[Angular Security Course](https://angular-university.io/course/angular-security-course) — Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.
+[Angular Progressive Web Apps (PWA) Course](https://angular-university.io/course/angular-pwa-course) — Learn Angular Progressive Web Applications, build the future of the Web Today.
 
-<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png" width="400" alt="Angular Security Course">
+<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png" width="400" alt="Angular Progressive Web Apps (PWA) Course">
 
-## Angular Material In Depth (Archived)
+### Angular Security Course - Web Security Fundamentals (Archived)
+
+[Angular Security Course - Web Security Fundamentals](https://angular-university.io/course/angular-security-course) — Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.
+
+<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png" width="400" alt="Angular Security Course - Web Security Fundamentals">
+
+### Angular Material In Depth (Archived)
 
 [Angular Material In Depth](https://angular-university.io/course/angular-material-course) — Learn in depth some of the most advanced components of the Angular Material UI widget library.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-material-course-1.jpg" width="400" alt="Angular Material In Depth">
 
-## Firebase & AngularFire In Depth (Archived)
+### Firebase & AngularFire In Depth (Archived)
 
 [Firebase & AngularFire In Depth](https://angular-university.io/course/angularfire-course) — Full stack Development with Angular, Firestore, Firebase Storage & Hosting, Firebase Cloud Functions & AngularFire.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/firebase-course-1.jpg" width="400" alt="Firebase & AngularFire In Depth">
 
-## NestJs In Practice (with MongoDB) (Archived)
+### NestJs In Practice (with MongoDB) (Archived)
 
-[NestJs In Practice](https://angular-university.io/course/nestjs-course) — Build a modern REST backend using Typescript and the familiar Angular API.
+[NestJs In Practice (with MongoDB)](https://angular-university.io/course/nestjs-course) — Build a modern REST backend using Typescript and the familiar Angular API.
 
-<img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/nestjs-v2.png" width="400" alt="NestJs In Practice">
+<img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/nestjs-v2.png" width="400" alt="NestJs In Practice (with MongoDB)">
 
-## Stripe Payments In Practice (Archived)
+### Stripe Payments In Practice (Archived)
 
 [Stripe Payments In Practice](https://angular-university.io/course/stripe-course) — Build your own online eCommerce store and subscription membership website with Stripe, Firebase, Node & Express.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/stripe-course.jpg" width="400" alt="Stripe Payments In Practice">
 
-## Angular Advanced Library Laboratory: Build Your Own Library (Archived)
+### Angular Advanced Library Laboratory: Build Your Own Library (Archived)
 
-[Angular Advanced Library Laboratory](https://angular-university.io/course/angular-advanced-course) — Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm.
+[Angular Advanced Library Laboratory: Build Your Own Library](https://angular-university.io/course/angular-advanced-course) — Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm.
 
-<img src="https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png" width="400" alt="Angular Advanced Library Laboratory">
+<img src="https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png" width="400" alt="Angular Advanced Library Laboratory: Build Your Own Library">
 
-## Angular Forms In Depth (Archived)
+### Angular Forms In Depth (Archived)
 
 [Angular Forms In Depth](https://angular-university.io/course/angular-forms-course) — Build complex enterprise data forms with template-driven and reactive forms.
 
 <img src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-forms-course-small.jpg" width="400" alt="Angular Forms In Depth">
 
-## Angular Testing Course (Archived)
+### Angular Testing Course (Archived)
 
 [Angular Testing Course](https://angular-university.io/course/angular-testing-course) — A complete guide to Angular Unit Testing and E2E Testing, including Testing best practices and continuous integration.
 
 <img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png" width="400" alt="Angular Testing Course">
 
-## Angular Material Course (Archived)
+### Angular Material Course (Archived)
 
 [Angular Material Course](https://angular-university.io/course/angular-material-course-v1) — Jumpstart your Application with a complete set of Material Design UI Widgets.
 
 <img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png" width="400" alt="Angular Material Course">
 
-## NgRx In Depth (Archived)
+### NgRx In Depth (Archived)
 
 [NgRx In Depth](https://angular-university.io/course/angular-ngrx-course) — Learn the modern NgRx Ecosystem, including Store, Effects, Router Store, NgRx Entity, Dev Tools and Schematics.
 
 <img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png" width="400" alt="NgRx In Depth">
 
-## Build a Web App with Angular and Firebase (Archived)
+### Build a Web App with Angular and Firebase (Archived)
 
 [Build a Web App with Angular and Firebase](https://angular-university.io/course/build-an-application-with-angular2) — Put all the concepts together to build a fully running Angular application using Firebase as the database.
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/angular_app-firebase-small-v2.png" width="400" alt="Build a Web App with Angular and Firebase">
 
-## Angular NgRx Store Reactive Extensions Architecture Course (Archived)
+### Angular NgRx Store Reactive Extensions Architecture Course (Archived)
 
 [Angular NgRx Store Reactive Extensions Architecture Course](https://angular-university.io/course/angular2-ngrx) — Learn how to use the Angular NgRx Reactive Extensions and its Tooling to build a complete application.
 
-<img src="https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png" width="400" alt="Angular NgRx Store Architecture Course">
+<img src="https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png" width="400" alt="Angular NgRx Store Reactive Extensions Architecture Course">
 
-## Angular RxJs Jumpstart (Archived)
+### Angular RxJs Jumpstart (Archived)
 
 [Angular RxJs Jumpstart](https://angular-university.io/course/angular2-http) — Learn RxJs quickly, apply it to learn how to use the HTTP module effectively.
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/angular-http-v2.png" width="400" alt="Angular RxJs Jumpstart">
 
-## RxJs and Reactive Patterns Angular Architecture Course (Archived)
+### RxJs and Reactive Patterns Angular Architecture Course (Archived)
 
 [RxJs and Reactive Patterns Angular Architecture Course](https://angular-university.io/course/reactive-angular-architecture-course) — Learn the core RxJs Observable Pattern and many other Design Patterns for building Reactive Angular Applications.
 
 <img src="https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png" width="400" alt="RxJs and Reactive Patterns Angular Architecture Course">
 
-## Angular Router (Archived)
+### Angular Router (Archived)
 
 [Angular Router](https://angular-university.io/course/angular2-routing) — Build Single Page Applications with Angular and its powerful Router.
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/angular2-routing-small-v2.png" width="400" alt="Angular Router">
 
-## Angular Universal Course (Archived)
+### Angular Universal Course (Archived)
 
 [Angular Universal Course](https://angular-university.io/course/angular-universal-course-v1-archived) — Use Angular on the server too! Learn Angular Server-Side Rendering.
 
 <img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-universal-small.png" width="400" alt="Angular Universal Course">
 
-## Angular Forms (Archived)
+### Angular Forms (Archived)
 
 [Angular Forms](https://angular-university.io/course/angular2-forms) — Learn how to build validatable and user-friendly data Forms effectively.
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/angular-forms-small-v2.png" width="400" alt="Angular Forms">
 
-## Serverless Angular with Firebase & AngularFire (Archived)
+### Serverless Angular with Firebase & AngularFire (Archived)
 
-[Serverless Angular with Firebase](https://angular-university.io/course/firebase-course) — Full stack Development with Angular, Firestore, Firebase Storage & Hosting, Firebase Cloud Functions & AngularFire.
+[Serverless Angular with Firebase & AngularFire](https://angular-university.io/course/firebase-course) — Full stack Development with Angular, Firestore, Firebase Storage & Hosting, Firebase Cloud Functions & AngularFire.
 
-<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png" width="400" alt="Serverless Angular with Firebase">
+<img src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png" width="400" alt="Serverless Angular with Firebase & AngularFire">
 
-## The Complete Typescript Course (Archived)
+### The Complete Typescript Course (Archived)
 
 [The Complete Typescript Course](https://angular-university.io/course/typescript-2-tutorial) — Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png" width="400" alt="The Complete Typescript Course">
 
-## Angular For Beginners (Archived)
+### Angular For Beginners (Archived)
 
 [Angular For Beginners](https://angular-university.io/course/getting-started-with-angular2) — Establish a solid layer of fundamentals, learn what's under the hood of Angular.
 
