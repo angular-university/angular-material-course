@@ -66,11 +66,11 @@ Fully up to date with the latest version of Angular: Signals, Zoneless and all t
 
 <img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-for-beginners.jpg" width="400" alt="Angular For Beginners (Signals Edition)">
 
-### Angular In Depth (Signals Edition) — Flagship Course
+### Definitive Angular (Signals Edition) — Flagship Course
 
-[Angular In Depth (Signals Edition)](https://angular-university.io/course/angular-in-depth-signals-course) — Our flagship course. The definitive guide to modern signal-based Angular. From fundamentals to advanced.
+[Definitive Angular (Signals Edition)](https://angular-university.io/course/angular-in-depth-signals-course) — Our flagship course. The definitive guide to modern signal-based Angular. From fundamentals to advanced.
 
-<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-in-depth-with-signals.jpg" width="400" alt="Angular In Depth (Signals Edition)">
+<img src="https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-in-depth-with-signals.jpg" width="400" alt="Definitive Angular (Signals Edition)">
 
 ### Angular Router In Depth (Signals Edition)
 
